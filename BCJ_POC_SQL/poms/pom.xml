@@ -11,6 +11,7 @@
   <modules>
     <module>code/routines</module>
     <module>jobs/process/STAGE/ext_table_ingest_initial_0.1</module>
+    <module>jobs/process/STANDARDIZE/load_fact_daily_0.1</module>
   </modules>
   <properties>
     <talend.project.name>BCJ_POC_SQL</talend.project.name>
