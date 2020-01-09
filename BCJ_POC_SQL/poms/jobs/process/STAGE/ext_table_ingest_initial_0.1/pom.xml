@@ -9,16 +9,16 @@
     <relativePath>../../../../</relativePath>
   </parent>
   <groupId>org.example.bcj_poc_sql.job</groupId>
-  <artifactId>Ext_table_ingest</artifactId>
+  <artifactId>Ext_table_ingest_Initial</artifactId>
   <version>0.1.0</version>
-  <name>BCJ_POC_SQL Ext_table_ingest-0.1.0 (0.1,Job Designs)</name>
+  <name>BCJ_POC_SQL Ext_table_ingest_Initial-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <talend.job.type>Standard</talend.job.type>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <talend.pigudf.groupid>org.example.bcj_poc_sql.pigudf</talend.pigudf.groupid>
     <talend.job.folder>stage/</talend.job.folder>
     <talend.job.context>Default</talend.job.context>
-    <talend.job.path>bcj_poc_sql/ext_table_ingest_0_1</talend.job.path>
+    <talend.job.path>bcj_poc_sql/ext_table_ingest_initial_0_1</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
@@ -38,8 +38,8 @@
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
-    <talend.job.name>Ext_table_ingest</talend.job.name>
-    <talend.job.finalName>ext_table_ingest_0_1</talend.job.finalName>
+    <talend.job.name>Ext_table_ingest_Initial</talend.job.name>
+    <talend.job.finalName>ext_table_ingest_initial_0_1</talend.job.finalName>
   </properties>
   <dependencies>
     <dependency>
