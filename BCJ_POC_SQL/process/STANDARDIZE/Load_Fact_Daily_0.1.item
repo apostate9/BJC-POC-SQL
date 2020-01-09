@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="64"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -107,13 +109,547 @@
     <routinesParameter id="_H8vU0DMAEeq5M6dAjFue0g" name="Numeric"/>
     <routinesParameter id="_H8xxEDMAEeq5M6dAjFue0g" name="TalendDataGenerator"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7e457ad4-c9ac-4fcf-8962-d938d921dfc4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1BXqWFUy2Rmc4KbWp3Uw7N15N13vzuQGatL8jd3s5SD/XevZKmxTj1F1JocUgUeSmfptsk0MccKB&#13;
-QZLeKA+v1g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c3236cae-88cb-4365-88d9-5e447275ebd4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>G8ZkHaFIpDvmYQx3IFCtEbr+inOGsMlTnME1A2w4tdJiVPOb6QDYrLUgi0OaEKlnVe7+iMRwhgmX&#13;
-3VQZFmprCA==</DigestValue></Reference></SignedInfo><SignatureValue>a/XxYIT71FZchg10c+0COwZVFOoxhaeZIa4X+WGN6FGnneF66aYU2Y+E12+fI5tQYV7Stv5dpAq2&#13;
-EycsEGZt0I0lS5P/8fXGKCIsQu4AVQ+su+bzVX4NtwBiKrPcyhyP7jKyy3bVZhEoGqSUuKydobi5&#13;
-VEI1e+p3/9hNfuMMG0rj764kuBrL9e1yH8aMDWJ8uedIOc49sOZL3E3cL9slUdyT8VUnWVHj7tuj&#13;
-3rtVhIlTaWWdZ3EQL2lQ/hvFMajTbDt96x2us53Zc8G00ZlvM3v+2XzHN9HmqOz7lCoal5CfRfwM&#13;
-boNjNLvEkAz5ONpbZupfyXvXBA3FmmyaG90hHw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <node componentName="tSQLDWHConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;sb-dev-sql.database.windows.net&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;UDMH_STD&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;BJC_Demo_DB&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;sb-admin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="p2FjNM2tw0qCCa+Ko99o3A=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="STD_MEDICATION_ADMINISTRATION_MASTER"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tSQLDWHInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHInput_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_OOD_0DJ6Eeqx0pF_arEPog"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;sb-dev-sql.database.windows.net&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;BJC_Demo_DB&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;sb-admin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="p2FjNM2tw0qCCa+Ko99o3A=="/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_OOD_0DJ6Eeqx0pF_arEPog - STD_MEDICATION_ADMINISTRATION_MASTER"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;STD_MEDICATION_ADMINISTRATION_MASTER&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT STD_MEDICATION_ADMINISTRATION_MASTER.PHARMACY_ORDER_BK,&#10;&#9;&#9;STD_MEDICATION_ADMINISTRATION_MASTER.PHARMACY_ORDER_ID,&#10;&#9;&#9;STD_MEDICATION_ADMINISTRATION_MASTER.MEDICATION_TXT,&#10;&#9;&#9;STD_MEDICATION_ADMINISTRATION_MASTER.ORDER_TS,&#10;&#9;&#9;STD_MEDICATION_ADMINISTRATION_MASTER.ADMIN_TS,&#10;&#9;&#9;STD_MEDICATION_ADMINISTRATION_MASTER.ADMIN_STATUS,&#10;&#9;&#9;STD_MEDICATION_ADMINISTRATION_MASTER.VALID_FROM_TS,&#10;&#9;&#9;STD_MEDICATION_ADMINISTRATION_MASTER.VALID_TO_TS,&#10;&#9;&#9;STD_MEDICATION_ADMINISTRATION_MASTER.TENANT_BK&#10;FROM&#9;STD_MEDICATION_ADMINISTRATION_MASTER&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="PHARMACY_ORDER_BK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PHARMACY_ORDER_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MEDICATION_TXT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_TS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADMIN_TS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADMIN_STATUS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VALID_FROM_TS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VALID_TO_TS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TENANT_BK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="STD_MEDICATION_ADMINISTRATION_MASTER" name="tSQLDWHInput_1">
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="ORDER_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="ADMIN_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="VALID_FROM_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="VALID_TO_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="80" name="TENANT_BK" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="512" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_sEjE8DMKEeq5M6dAjFue0g-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="Transform"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata name="Transformed"/>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="Transformed" sizeState="INTERMEDIATE"/>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="MedAdminMaster" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="PHARMACY_ORDER_BK" type="id_String"/>
+        <mapperTableEntries name="PHARMACY_ORDER_ID" type="id_String"/>
+        <mapperTableEntries name="MEDICATION_TXT" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ORDER_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="ADMIN_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="ADMIN_STATUS" nullable="true" type="id_String"/>
+        <mapperTableEntries name="VALID_FROM_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="VALID_TO_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="TENANT_BK" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_OOD_0DJ6Eeqx0pF_arEPog"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;sb-dev-sql.database.windows.net&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;BJC_Demo_DB&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;sb-admin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="p2FjNM2tw0qCCa+Ko99o3A=="/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_OOD_0DJ6Eeqx0pF_arEPog - COMMON_CODE_TENANT_COMMON_CODE_BRG"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;COMMON_CODE_TENANT_COMMON_CODE_BRG&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT COMMON_CODE_TENANT_COMMON_CODE_BRG.TENANT_CMN_CD_DK,&#10;&#9;&#9;COMMON_CODE_TENANT_COMMON_CODE_BRG.TENANT_CMN_CD,&#10;&#9;&#9;COMMON_CODE_TENANT_COMMON_CODE_BRG.CMN_CD_DK,&#10;&#9;&#9;COMMON_CODE_TENANT_COMMON_CODE_BRG.CMN_CD,&#10;&#9;&#9;COMMON_CODE_TENANT_COMMON_CODE_BRG.VALID_FROM_TS,&#10;&#9;&#9;COMMON_CODE_TENANT_COMMON_CODE_BRG.VALID_TO_TS,&#10;&#9;&#9;COMMON_CODE_TENANT_COMMON_CODE_BRG.TENANT_DK&#10;FROM&#9;COMMON_CODE_TENANT_COMMON_CODE_BRG&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="TENANT_CMN_CD_DK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TENANT_CMN_CD"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CMN_CD_DK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CMN_CD"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VALID_FROM_TS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VALID_TO_TS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TENANT_DK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="COMMON_CODE_TENANT_COMMON_CODE_BRG" name="tDBInput_1">
+      <column comment="" key="true" length="64" name="TENANT_CMN_CD_DK" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="80" name="TENANT_CMN_CD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="CMN_CD_DK" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="80" name="CMN_CD" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="VALID_FROM_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="VALID_TO_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="19" name="TENANT_DK" nullable="false" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_OOD_0DJ6Eeqx0pF_arEPog"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;sb-dev-sql.database.windows.net&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;BJC_Demo_DB&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;sb-admin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="p2FjNM2tw0qCCa+Ko99o3A=="/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_OOD_0DJ6Eeqx0pF_arEPog - TENANT_DIM"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;TENANT_DIM&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT TENANT_DIM.TENANT_DK,&#10;&#9;&#9;TENANT_DIM.TENANT_BK,&#10;&#9;&#9;TENANT_DIM.VALID_FROM_TS,&#10;&#9;&#9;TENANT_DIM.VALID_TO_TS&#10;FROM&#9;TENANT_DIM&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="TENANT_DK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TENANT_BK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VALID_FROM_TS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VALID_TO_TS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="TENANT_DIM" name="tDBInput_2">
+      <column comment="" key="true" length="19" name="TENANT_DK" nullable="false" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="80" name="TENANT_BK" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="VALID_FROM_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="VALID_TO_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tSQLDWHOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHOutput_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_OOD_0DJ6Eeqx0pF_arEPog"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;sb-dev-sql.database.windows.net&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;BJC_Demo_DB&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;sb-admin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="p2FjNM2tw0qCCa+Ko99o3A=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;MEDICATION_ADMINISTRATION_FACT&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="MEDICATION_ADMINISTRATION_DK"/>
+    <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
+    <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" show="false" value="_OOD_0DJ6Eeqx0pF_arEPog - MEDICATION_ADMINISTRATION_FACT"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="MEDICATION_ADMINISTRATION_DK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PHARMACY_ORDER_BK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PHARMACY_ORDER_ID"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MEDICATION_TXT"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_TS"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADMIN_TS"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADMIN_STATUS_CD_DK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADMIN_STATUS_CD"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VALID_FROM_TS"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VALID_TO_TS"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TENANT_DK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CRN_IND"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="MEDICATION_ADMINISTRATION_FACT" name="tSQLDWHOutput_1">
+      <column comment="" key="true" length="19" name="MEDICATION_ADMINISTRATION_DK" nullable="false" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="ORDER_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="ADMIN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="ADMIN_STATUS_CD_DK" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS_CD" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="VALID_FROM_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="VALID_TO_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="19" name="TENANT_DK" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="CRN_IND" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <metadata connector="REJECT" label="MEDICATION_ADMINISTRATION_FACT" name="REJECT">
+      <column comment="" key="true" length="19" name="MEDICATION_ADMINISTRATION_DK" nullable="false" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="ORDER_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="ADMIN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="64" name="ADMIN_STATUS_CD_DK" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS_CD" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="VALID_FROM_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="27" name="VALID_TO_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="19" name="TENANT_DK" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="CRN_IND" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSQLDWHConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHConnection_2"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_OOD_0DJ6Eeqx0pF_arEPog"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;sb-dev-sql.database.windows.net&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;BJC_Demo_DB&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;sb-admin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="p2FjNM2tw0qCCa+Ko99o3A=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="MEDICATION_ADMINISTRATION_FACT"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_1"/>
+    <elementParameter field="CHECK" name="AUTOCAST" value="false"/>
+    <elementParameter field="TABLE" name="MANUALTABLE"/>
+    <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
+    <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tConvertType_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHConnection_1" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHConnection_1" target="tSQLDWHInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="MedAdminMaster" lineStyle="0" metaname="tSQLDWHInput_1" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="MedAdminMaster"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHConnection_2" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHConnection_2" target="tSQLDWHConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHOutput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHConnection_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_19c8cf79-708c-4ee4-a737-bc9d68817521"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>b6XiAv1dAIj9B4Dv8PauJgpof8V8NoNN18EXcxd/e9pKqTwRHaId3EopFfNLDKT9JSrTpj6RTDfI&#13;
+Ot4x/js0oA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d9c63fd8-d091-4569-9399-13d1322cfe91"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>w/3QTSTZNnrFup06PkGdv2eSVIQMDdh1mPs+w96iMrB4is/bsDbLoB+qevIX0EtmHZyFkr3muAPV&#13;
+C/Ikt1T3yA==</DigestValue></Reference></SignedInfo><SignatureValue>fK5jZ5MAlg9m9UYob3iQzSwq784RQYWpjRIRLTv7tvgHpVulUt484OSsYtVRo6xFkzAnJGyiwh4k&#13;
+wwKgMC0nezQd6oDvXb0UR6WWLVSVYPf/evupXVfBxtVxccB6DLUD6lHTnsvOqY+CCOHfzDeqbILJ&#13;
+TKaDONaupWluKSYkVo980G9ae22endwSTStHixOlLS1H4WNmw9oy6sxUTlGZLtef5STLoJ6alEvn&#13;
+El+jv5jimjksjV5vylyEWYcGWxAenBkMS0n3NcqioS640YWmlZBanmt8/qAsxgZpk/mSPBcP+vbV&#13;
+gl2Zm+AgfGslEKpKYPFi4w9dF50TMS92+EPIbQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -135,4 +671,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c3236cae-88cb-4365-88d9-5e447275ebd4" Target="#_7e457ad4-c9ac-4fcf-8962-d938d921dfc4"><Timestamp>2020-01-09 18:05:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d9c63fd8-d091-4569-9399-13d1322cfe91" Target="#_19c8cf79-708c-4ee4-a737-bc9d68817521"><Timestamp>2020-01-09 21:22:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
