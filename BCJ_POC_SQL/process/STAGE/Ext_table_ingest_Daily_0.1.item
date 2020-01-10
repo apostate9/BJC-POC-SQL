@@ -330,12 +330,12 @@
       </inputTables>
       <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="FromExt.ORDER_ID " name="ORDER_ID" operator="=" type="id_String"/>
-        <mapperTableEntries expression="FromExt.ORDER_TS " name="ORDER_TS" nullable="true" operator="=" type="id_Date"/>
+        <mapperTableEntries expression="FromExt.ORDER_TS " name="ORDER_TS" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="FromExt.DRUG_NAME " name="DRUG_NAME" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="FromExt.ADMIN_TS " name="ADMIN_TS" nullable="true" operator="=" type="id_Date"/>
+        <mapperTableEntries expression="FromExt.ADMIN_TS " name="ADMIN_TS" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="FromExt.STATUS " name="STATUS" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="FromExt.CURATED_STATUS " name="CURATED_STATUS" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries name="INSERT_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="INSERT_TS" nullable="true" type="id_String"/>
         <mapperTableEntries name="UPDATE_TS" nullable="true" type="id_Date"/>
       </inputTables>
     </nodeData>
@@ -772,13 +772,13 @@
       <column comment="" key="false" length="255" name="ORDER_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="27" name="ORDER_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="27" name="ORDER_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="500" name="DRUG_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="27" name="ADMIN_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="27" name="ADMIN_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="80" name="STATUS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -787,7 +787,7 @@
       <column comment="" key="false" length="80" name="CURATED_STATUS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="27" name="INSERT_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="27" name="INSERT_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="27" name="UPDATE_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
@@ -798,13 +798,13 @@
       <column comment="" key="false" length="255" name="ORDER_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="27" name="ORDER_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="27" name="ORDER_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="500" name="DRUG_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="27" name="ADMIN_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="27" name="ADMIN_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="80" name="STATUS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -813,7 +813,7 @@
       <column comment="" key="false" length="80" name="CURATED_STATUS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="27" name="INSERT_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="27" name="INSERT_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="27" name="UPDATE_TS" nullable="true" pattern="&quot;YYYY-MM-DD hh:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true">
@@ -988,13 +988,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_215d2389-479c-4857-8f2b-4559e38ad147"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GZw+6id0nBTqmWXhStZLDyx8U52910ebz8ZNvsX/tpF9TVnbHeHutFPgmRD+260KICvqwUZb9fve&#13;
-Do9oH2cG6A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3c162247-6a08-4c75-8315-617cd0b48555"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+sDU+VKrH8f4F+S4Do5D97uL4dp+TiAVHWEpKcOTgy1bUBk1NnTlJ2c/hGQOQloEXngqRjVoCCIw&#13;
-twT4UuYkOQ==</DigestValue></Reference></SignedInfo><SignatureValue>iXDhN7kI8mh52mRvyhxBrcxK9qG00VDhUp3YKZ8/6lDtfmdwwzZu6eQ7l5Q5CwpX6qh8DnlFZlja&#13;
-o1EqWO0pl3FA/0QPTqaMdmwXcx/Mx8HLitmOyeyV/O0uQefwxihOvEdQmyBKUeP03C+Eyh2jBbKv&#13;
-u4tCf0efis8IY7oeRU6NRMTXoCjJsSlY2s/2MLrIM6sL+tLzg7ZwpkMXVcHKgH0ubFzD0G6MqZJR&#13;
-+SBCo2s1b3bw9Aq1Rm+r21q/b1LO/l9VujWhKOL+AOQ463fmhWNlAYWnkJUrd4tn1P5eTLKQ5+Xy&#13;
-PividS7K78mBG+BB/1Txs7Ief1b0kwW4/ZwYJw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7e4e4c0f-476a-4920-8072-74aafe7685c4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ST9/YEzjUnvtckrgN5eUlb9PgtrycQ+CK8ZfTiHpGF3iI2qgmQh7nbxyq9KpHTzLwChjCZrYPFvP&#13;
+nhtE5ZHPKg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dcf277db-6166-4b82-a0c7-d8710309bae0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1YfZAp2nLS+wI+Hn3UnTErPyM68bnoEhkPsEPO4baiL4cGpdvKdFWQOOo0AhiOvIsuzt+mqevLNr&#13;
+kJbWbTXrGA==</DigestValue></Reference></SignedInfo><SignatureValue>SX3fe7sQSKu1tD5BGQiDe2X7k544FNrQtiWvt7sQmLyaWw8AgDkOaPs3pmle1Xh+4IzP8Jf11c7Q&#13;
+417KAka5vnDQezOsYnvnSgTVI6tvrWeP6qCXkQ3x1ZwomMA9XxDWdlQtU8xiMW1jIsvN5Xn4Yle/&#13;
+iGV+KVyw3vPIexDx13iSSgKmJBX8QRnkky/vnuxMGMAjXuMRVfYwV4NQiLYP0z8P972RtLuqgA6C&#13;
+DyFzvFAw9GHCAxiExL4cZC0Jsev39vsQxW9ON75hi+lXBVn8zH4W2hps5ycUx/FBGY73FfkD/DwH&#13;
+ZCP/XizbR4Jds7mh6TvjAURX/GomSJNqN89q1Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1016,4 +1016,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3c162247-6a08-4c75-8315-617cd0b48555" Target="#_215d2389-479c-4857-8f2b-4559e38ad147"><Timestamp>2020-01-10 18:28:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dcf277db-6166-4b82-a0c7-d8710309bae0" Target="#_7e4e4c0f-476a-4920-8072-74aafe7685c4"><Timestamp>2020-01-10 18:30:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
