@@ -9,9 +9,9 @@
     <relativePath>../../../../</relativePath>
   </parent>
   <groupId>org.example.bcj_poc_sql.job</groupId>
-  <artifactId>DateCheck</artifactId>
+  <artifactId>Ext_table_Ingest_Using_CHKSUM_demo</artifactId>
   <version>0.1.0</version>
-  <name>BCJ_POC_SQL DateCheck-0.1.0 (0.1,Job Designs)</name>
+  <name>BCJ_POC_SQL Ext_table_Ingest_Using_CHKSUM_demo-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
@@ -19,12 +19,12 @@
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.version>0.1</talend.job.version>
     <talend.project.name.lowercase>bcj_poc_sql</talend.project.name.lowercase>
-    <talend.job.path>bcj_poc_sql/datecheck_0_1</talend.job.path>
+    <talend.job.path>bcj_poc_sql/ext_table_ingest_using_chksum_demo_0_1</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>BCJ_POC_SQL</talend.project.name>
     <talend.product.version>7.2.1.20190909_1200_patch</talend.product.version>
-    <talend.job.finalName>datecheck_0_1</talend.job.finalName>
+    <talend.job.finalName>ext_table_ingest_using_chksum_demo_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.bcj_poc_sql.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.bcj_poc_sql.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
@@ -33,7 +33,7 @@
     <talend.job.context>Default</talend.job.context>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
-    <talend.job.name>DateCheck</talend.job.name>
+    <talend.job.name>Ext_table_Ingest_Using_CHKSUM_demo</talend.job.name>
     <talend.job.id>_Zb7AADSWEeqTosJNkIcndA</talend.job.id>
     <talend.project.id>0</talend.project.id>
     <talend.job.folder>stage/</talend.job.folder>
