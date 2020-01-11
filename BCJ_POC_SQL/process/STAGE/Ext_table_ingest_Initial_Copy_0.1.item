@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" name="Default"/>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="Used for MED ADMIN FACT's PK Sequencing" name="MED_ADM_FCT_SEQ" prompt="MED_ADM_FCT_SEQ?" promptNeeded="false" type="id_Long" value=""/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="224"/>
@@ -210,7 +212,7 @@
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateExpressionFilter="true" columnNameFilter="row3.ORDER_ID is not null and FromExt.CHKSUM &lt;&gt; row3.CHKSUM" expressionFilter="row3.ORDER_ID != null &amp;&amp; FromExt.CHKSUM != row3.CHKSUM" name="Update_Mgmt_Table" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="FromExt.ORDER_ID " name="ORDER_ID" nullable="true" type="id_String"/>
@@ -2309,38 +2311,16 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHCommit_2" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHCommit_2" target="tSQLDWHCommit_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk9"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHInput_3" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_3" target="tSQLDWHInput_5">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk10"/>
+  </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tSQLDWHInput_3" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_3" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHInput_3" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_3" target="tSQLDWHInput_5">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk10"/>
-  </connection>
-  <connection connectorName="FLOW" label="Insert_to_STD_MED_ADMIN_MASTER" lineStyle="0" metaname="Insert_to_STD_MED_ADMIN_MASTER" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tConvertType_4">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="CHKSUM"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="TENANT_DK"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ADMIN_STATUS_CD_DK"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="CRN_IND"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ADMIN_STATUS_CD"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Insert_to_STD_MED_ADMIN_MASTER"/>
-  </connection>
-  <connection connectorName="FLOW" label="Update_to_STD_MED_ADMIN_MASTER" lineStyle="0" metaname="Update_to_STD_MED_ADMIN_MASTER" offsetLabelX="50" offsetLabelY="27" outputId="2" source="tMap_2" target="tConvertType_3">
+  <connection connectorName="FLOW" label="Update_to_STD_MED_ADMIN_MASTER" lineStyle="0" metaname="Update_to_STD_MED_ADMIN_MASTER" offsetLabelX="50" offsetLabelY="27" outputId="1" source="tMap_2" target="tConvertType_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="CHKSUM"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -2361,6 +2341,28 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Update_to_STD_MED_ADMIN_MASTER"/>
+  </connection>
+  <connection connectorName="FLOW" label="Insert_to_STD_MED_ADMIN_MASTER" lineStyle="0" metaname="Insert_to_STD_MED_ADMIN_MASTER" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tConvertType_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="CHKSUM"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TENANT_DK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ADMIN_STATUS_CD_DK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CRN_IND"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ADMIN_STATUS_CD"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Insert_to_STD_MED_ADMIN_MASTER"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="8" metaname="tSQLDWHInput_4" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_4" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2442,13 +2444,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_62bd3099-4cd7-403d-b5c2-5d9380637440"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vczoRVa79BG1z3KFtXlwtEi4zh3ke63n/F/r6RvikKjZQPfKgBqfRJnANDl9auVsZfZdSJSZhx7x
-r2veFynUlw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fdd9adba-a958-473f-90f4-1b7e6cad34a7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Jm30ZLlq45DJgZlIsxNTBqvqevia+Ri7BE6jv07X3HUlyEsTP+K/I6ly++f2Ghmfiu1VVEwop8Jg
-eCD5ytRUtg==</DigestValue></Reference></SignedInfo><SignatureValue>NBsQ8wAl2GimHolnjf/gH/LaBLevjWyNuXENWLv145clmIn3lHLrGo2kh2Zbs+voR3Cgad2g7Krc
-S2dP8wEYpgkqNWzlfZpho/cjDE0Iy7RECsSxxmE1voPXdGDBT/O5bb0zas4NwTvKW2GaBXd3p3p8
-efNAzCZfmtiG+g41rYuiLQ3TUkLtkCNkriNa91L7XF9Jk1zhARtGDHfatGUQBUUtR+/8ZEAN1erh
-ndXT2a+ZXKyEqO0JP4r09zDyC19RIIQM8IHJIWsk0KMFnnNJmLSfFvsYySSqGGBpYU0i58P/5+g2
-n0VO7SutTByLrIw3t9MGYSWHE5VmTLzGfJFmBg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_990fa79c-4833-443f-bd37-438d329f752e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>43snfN3FC9qfiXeqjONRT7htFp2cUu14/4p5QhlPEWHmzzO5qTCHvQaMK/RzTghifo50kJM9ATwo
+N0HfWZPPWQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_578b64a1-a4b9-4e99-9970-c3c09a95ce7e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9wJNJNjyz2W/dgIrbE9oUQ00Iqdp+CGJPSGQzg7gTr5RgD55p+xSiF65pLBHtuJZQLcB/cDVB3+S
+YDiSDPMOFg==</DigestValue></Reference></SignedInfo><SignatureValue>nS9zLV0dhVCm31MsWlikrVdmbm+FG8xu9PzhME7i8XvejENbuAzMLjfT+/YxHbjj/4oyiAfnkAIS
+Xt6EM5N//kDkB2Ubql59VH2IpdFkjJr1pOJ8B7+0aETrvKhBuXgfENKgq6hX4iFp6MLXFCbccVAW
+n1r1AKbtiz/iuKJsSFZDqinvKv901ixfZI7LSEFDhW4ubAz8XkCi0ZjX7LC10d765RD7/Nzkjibp
+NRMs1/ji1bpzS7SjmGlTjxTY1MIhmMvpKRa8m8yYZY0ckviVoi6147OJhA3Bf68OjntR+JjXOH3W
+2kxSfTg+T8zii3dUlgmO2Q6uyTDlobSVO3Wh5g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -2470,4 +2472,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fdd9adba-a958-473f-90f4-1b7e6cad34a7" Target="#_62bd3099-4cd7-403d-b5c2-5d9380637440"><Timestamp>2020-01-11 18:19:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_578b64a1-a4b9-4e99-9970-c3c09a95ce7e" Target="#_990fa79c-4833-443f-bd37-438d329f752e"><Timestamp>2020-01-11 19:40:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
