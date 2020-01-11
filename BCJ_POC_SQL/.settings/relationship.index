@@ -37,6 +37,10 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
+    "id" : "Generate_SHA_256",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
     "id" : "Mathematical",
     "version" : "Latest",
     "type" : "routine"
@@ -77,7 +81,15 @@
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_OOD_0DJ6Eeqx0pF_arEPog - STD_MEDICATION_ADMINISTRATION_MASTER_CHKSUM",
+    "id" : "_OOD_0DJ6Eeqx0pF_arEPog - MEDICATION_ADMINISTRATION_FACT",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_OOD_0DJ6Eeqx0pF_arEPog - STD_MEDICATION_ADMINISTRATION_MASTER",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_OOD_0DJ6Eeqx0pF_arEPog - TENANT_DIM",
     "version" : "Latest",
     "type" : "schema"
   } ]
