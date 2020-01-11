@@ -129,7 +129,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  ext.full_Load.ORDER_ID,&#13;&#10;&#9;&#9;ext.full_Load.ORDER_TS,&#13;&#10;&#9;&#9;ext.full_Load.DRUG_NAME,&#13;&#10;&#9;&#9;ext.full_Load.ADMIN_TS,&#13;&#10;&#9;&#9;ext.full_Load.STATUS,&#13;&#10;&#9;&#9;ext.full_Load.CURATED_STATUS,&#13;&#10;&#9;    ext.full_Load.INSERT_TS,&#13;&#10;        ext.full_Load.UPDATE_ts,&#13;&#10;        HASHBYTES('SHA2_256', coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.DRUG_NAME,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ADMIN_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.CURATED_STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.INSERT_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.UPDATE_ts,'')) as CHKSUM&#13;&#10;FROM&#9;ext.full_Load&#13;&#10;order by ext.full_Load.ORDER_ID&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  ext.full_Load.ORDER_ID,&#13;&#10;&#9;&#9;ext.full_Load.ORDER_TS,&#13;&#10;&#9;&#9;ext.full_Load.DRUG_NAME,&#13;&#10;&#9;&#9;ext.full_Load.ADMIN_TS,&#13;&#10;&#9;&#9;ext.full_Load.STATUS,&#13;&#10;&#9;&#9;ext.full_Load.CURATED_STATUS,&#13;&#10;&#9;    ext.full_Load.INSERT_TS,&#13;&#10;        ext.full_Load.UPDATE_TS,&#13;&#10;        HASHBYTES('SHA2_256', coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.DRUG_NAME,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ADMIN_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.CURATED_STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.INSERT_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.UPDATE_ts,'')) as CHKSUM&#13;&#10;FROM&#9;ext.full_Load&#13;&#10;order by ext.full_Load.ORDER_ID&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -153,7 +153,7 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="INSERT_TS"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UPDATE_ts"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UPDATE_TS"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CHKSUM"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -168,7 +168,7 @@
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_ts" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
     </metadata>
   </node>
@@ -187,7 +187,7 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="Enrich Data"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="Enriched_Med_Admin">
+    <metadata connector="FLOW" name="Update_Mgmt_Table">
       <column comment="" key="false" length="255" name="ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="ORDER_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="DRUG_NAME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
@@ -195,7 +195,7 @@
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_ts" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="Insert">
@@ -206,13 +206,13 @@
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_ts" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" columnNameFilter="row3.ORDER_ID is not null and FromExt.CHKSUM &lt;&gt; row3.CHKSUM" expressionFilter="row3.ORDER_ID != null &amp;&amp; FromExt.CHKSUM != row3.CHKSUM" name="Enriched_Med_Admin" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" columnNameFilter="row3.ORDER_ID is not null and FromExt.CHKSUM &lt;&gt; row3.CHKSUM" expressionFilter="row3.ORDER_ID != null &amp;&amp; FromExt.CHKSUM != row3.CHKSUM" name="Update_Mgmt_Table" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="FromExt.ORDER_ID " name="ORDER_ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromExt.ORDER_TS " name="ORDER_TS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromExt.DRUG_NAME " name="DRUG_NAME" nullable="true" type="id_String"/>
@@ -220,7 +220,7 @@
         <mapperTableEntries expression="FromExt.STATUS " name="STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromExt.CURATED_STATUS " name="CURATED_STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row3.INSERT_TS " name="INSERT_TS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="FromExt.UPDATE_ts " name="UPDATE_ts" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="FromExt.UPDATE_TS " name="UPDATE_TS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromExt.CHKSUM " name="CHKSUM" nullable="true" type="id_Object"/>
       </outputTables>
       <outputTables activateExpressionFilter="true" expressionFilter="row3.ORDER_ID != null" name="Insert" sizeState="INTERMEDIATE">
@@ -231,7 +231,7 @@
         <mapperTableEntries expression="FromExt.STATUS " name="STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromExt.CURATED_STATUS " name="CURATED_STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.getDate(&quot;YYYY-MM-DD hh:mm:ss&quot;) " name="INSERT_TS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.getDate(&quot;YYYY-MM-DD hh:mm:ss&quot;) " name="UPDATE_ts" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.getDate(&quot;YYYY-MM-DD hh:mm:ss&quot;) " name="UPDATE_TS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromExt.CHKSUM " name="CHKSUM" nullable="true" type="id_Object"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="FromExt" sizeState="INTERMEDIATE">
@@ -242,7 +242,7 @@
         <mapperTableEntries name="STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries name="CURATED_STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries name="INSERT_TS" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UPDATE_ts" nullable="true" type="id_String"/>
+        <mapperTableEntries name="UPDATE_TS" nullable="true" type="id_String"/>
         <mapperTableEntries name="CHKSUM" nullable="true" type="id_Object"/>
       </inputTables>
       <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" persistent="true" sizeState="INTERMEDIATE">
@@ -267,7 +267,7 @@
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_ts" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
@@ -278,7 +278,7 @@
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_ts" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -352,7 +352,7 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UPDATE_ts"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UPDATE_TS"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -378,7 +378,7 @@
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_ts" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
@@ -389,7 +389,7 @@
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_ts" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -477,7 +477,7 @@
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_ts" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
@@ -488,7 +488,7 @@
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_ts" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -562,7 +562,7 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UPDATE_ts"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UPDATE_TS"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -588,7 +588,7 @@
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_ts" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
@@ -599,7 +599,7 @@
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_ts" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -862,7 +862,7 @@
       <column comment="" defaultValue="" key="false" length="10" name="CRN_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateExpressionFilter="true" expressionFilter="row9.PHARMACY_ORDER_BK == null  " name="Insert_MedAdminFact" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row8.PHARMACY_ORDER_BK " name="PHARMACY_ORDER_BK" type="id_String"/>
@@ -2141,7 +2141,7 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHInput_1" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_1" target="tSQLDWHInput_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk7"/>
   </connection>
-  <connection connectorName="FLOW" label="Enriched_Med_Admin" lineStyle="0" metaname="Enriched_Med_Admin" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tConvertType_2">
+  <connection connectorName="FLOW" label="Update_Mgmt_Table" lineStyle="0" metaname="Update_Mgmt_Table" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tConvertType_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="STATUS"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -2161,12 +2161,12 @@
       <elementValue elementRef="TRACE_COLUMN" value="CURATED_STATUS"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="UPDATE_ts"/>
+      <elementValue elementRef="TRACE_COLUMN" value="UPDATE_TS"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Enriched_Med_Admin"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Update_Mgmt_Table"/>
   </connection>
   <connection connectorName="FLOW" label="Insert" lineStyle="0" metaname="Insert" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tConvertType_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2382,13 +2382,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_808cfea3-94db-42b8-8573-a3768f58e103"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gUD5dNM39kOXqO947r9SpJ81NpFOS9Tkw13/rOjkRLxKHpSRFS/lMkYjoIrfRfI5xrAwbXg/kh7b
-MT7VLUXlrQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_02ee0ab4-4e4c-40bc-8b18-168258606690"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>S91lxScjWjZxtOnbOMYY0d9xkfNSj9Kl7wADhIB6KQ2CxFP38axbsGb7yek0ax27rF4ZvC8OJaES
-vKSYIJuPCA==</DigestValue></Reference></SignedInfo><SignatureValue>QRshgP7hWcDa3o2wkat9i5fBlDDTraXjkg/7tHEzl9/yWYJfhf3o/jAOrwtDsaKX9tKImaAU+ffP
-tZuxgjgt9pfhX/BImBJUC6uipdXcUTDLEQmaQHFl2jy70vRB+/bF0zIVBKmci2d2nb97Qy/5MVJD
-5/u7V3eid9D06edaB6i0udZcWNPjG2+HAZU5JLOL51kqUlc9lT2yYgfuRl3EqebjEyAkKfqCep/Q
-YmcihivyAelYTTLdruM4/V9ESLRSDfMls1+AUC6LhUTayg9tX5ZK2O8rLjblMMmfOcqlvySkUNRy
-bgK6eLAAO3NIfYtQShFdbcrdKT3gHfRUNhpy4A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e039c95e-08cf-423e-9158-74b007a8379f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CNFBnLYB7M44I3d30jbyVqEhGNxENszzWniEcvCrXdzsT4D54sxbFqpIiZgLqB9kTiSFABQMkDvN
+CCQk4zXBAA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7de58c00-071e-45d3-8640-1a173fdba002"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PsgsvdvEUINu7gHl2fXhnapKWXEt7eHRK3BtQ4eK68Te79Q3MO70UPwtk0+xhpETYvVs7xdW3V0D
+4Cubxvam7Q==</DigestValue></Reference></SignedInfo><SignatureValue>Q0M447pGDhlppbqh0c2y6Jh2J6jR62TJJElNrfpvC1NQC2w4f8/O6bD5LdV2JJdHrkAsQR699jBn
+NBna7F6xbjZoy0pvXvvfGMwIzJ+r4dc8YFIBgkYUmUl+rUZHBCOiY1Gklinxv17OmPY3Z93X1dSX
+Vvrac2auWFP6ZeEKKjGtJx4jcPvIwK+oKLHguK/eV6NywUkl07mUymYhEpFwTcZ9tuTE5QbGhJqG
+IQPtmMcJZY7Zuey4NWrtn+ZI6/mGr0e9RwZezHFydlwsiUr1DPiCDE8oASqJLseCVbLuto9sVCjz
+WmXxXj4xmhzo1z9luPSAElc0EEUEvXUfau0aKQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -2410,4 +2410,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_02ee0ab4-4e4c-40bc-8b18-168258606690" Target="#_808cfea3-94db-42b8-8573-a3768f58e103"><Timestamp>2020-01-11 16:44:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7de58c00-071e-45d3-8640-1a173fdba002" Target="#_e039c95e-08cf-423e-9158-74b007a8379f"><Timestamp>2020-01-11 16:49:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
