@@ -1770,14 +1770,12 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_OOD_0DJ6Eeqx0pF_arEPog - MEDICATION_ADMINISTRATION_FACT"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;MEDICATION_ADMINISTRATION_FACT&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT COALESCE(MAX(UDMH_DIM.MEDICATION_ADMINISTRATION_FACT.MEDICATION_ADMINISTRATION_DK),0) as MED_ADMIN_FACT_SEQ&#13;&#10;FROM&#9; UDMH_DIM.MEDICATION_ADMINISTRATION_FACT&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT COALESCE(MAX(UDMH_DIM.MEDICATION_ADMINISTRATION_FACT.MEDICATION_ADMINISTRATION_DK),0) as MAX_DK&#13;&#10;FROM&#9; UDMH_DIM.MEDICATION_ADMINISTRATION_FACT&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1787,12 +1785,12 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="MEDICATION_ADMINISTRATION_DK"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MAX_DK"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="MEDICATION_ADMINISTRATION_FACT" name="tSQLDWHInput_8">
-      <column comment="" key="true" length="19" name="MEDICATION_ADMINISTRATION_DK" nullable="false" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true">
+      <column comment="" key="true" length="19" name="MAX_DK" nullable="false" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="false">
@@ -1832,7 +1830,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.MED_ADMIN_FACT_SEQ = row6.MED_ADMIN_FACT_SEQ"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.MED_ADMIN_FACT_SEQ = row6.MAX_DK"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1"/>
@@ -1940,13 +1938,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4703c0da-bc86-4d1c-b931-64d0278f3ae8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8mF8prZl/s0lapj7s94tzlptczt/NfNryGOGgG0PJ3c2oK+dGEvleZ0MFnMW4gDvEp2Xb4HVsdxB
-za4GjwCoeA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b0cc6e91-1031-4c66-a041-e66716828931"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Sc7WhZT0k6p/uAZoZriht/zU+FhufLmuC2k2F8A8M0eplMuO1mUx1M3/L2DheL7ZTxhVMJ5ggwHK
-xKrPgnjsfw==</DigestValue></Reference></SignedInfo><SignatureValue>cLAtMPSUpSxpo0q8Klb0+eBxuMeoqggGQsCSW/Qpoyfa65z8YLz3fWx95znT53YB5J3zGKOhCb7v
-5YYQzRH4GDhT59M8MzWsqNxotvmQI/Qak5EQES+IVFJ+uCJof1vdgqe51EpPhEXsc7gF/Zc6Cdur
-MVlC+RNPVTtiVgrfbGaRVPVNl7bkDJu7m9teYPhaetf3c/I0b96oyT0gILaIJcAMUbMunYcUXjDE
-jlEODczSFVyQhTfzSL9akQam790b2BCCrJ/dJer/FRi93VKhrdH3C4QmHc6vw5pJHdKk9CCqbQ3q
-39R6BCVo3ZmWJc2AHRAMYN7d0Oc0Sg+20o51pw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_475516d9-9307-4698-9d17-113ae631d354"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5WZx/Ryr7DRGYh8ouB0ZQ1yH0rXUTLrGgbBiM4UMw41w3RaP/0HPTtfbYL+3MOpKs3fqxuEq7hFq
+hrYUH55gJQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c8209626-be89-42cf-a51a-4a3ce0be39e5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Uyii21MopvQItMZhRckKatx9qfQfFnJ7ikbuKmj/wf6ZnXHBFAMevakA7i1PTzBV1t1Vo0ngyRX0
+YIwZWQfQeg==</DigestValue></Reference></SignedInfo><SignatureValue>awGSZMIrhkNlD89/zujPmFQUvx8t8/lunBiS+WUtY/A632RPZWdepZKYGdlnUF9xJS52hu12Palu
+Zk9trsQD/3JUXhooZHDkCMVJGd1YFXmafxfHEFAZ9Vgg7898sIspdChwSl2Vp50B1aoWC3uLf2S3
+7gQS4ZJvQrqDBPHOmXZ69GHAXO6d1O3/kIYu2SWSQVjRuooXhMtGoFnyScD8PwVuXhhEnavn3JzE
+WrR4WIgmpz+fsMd4J7QIGUYTWkrByYgQE16FdHwONR2nqFxJTiKpKmZEdVMAKYy9Z7pffj3QJ2rk
+avvb7nLDHIojB9j+M+5Z2B65lcfRUD0uia87iA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1968,4 +1966,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b0cc6e91-1031-4c66-a041-e66716828931" Target="#_4703c0da-bc86-4d1c-b931-64d0278f3ae8"><Timestamp>2020-01-11 20:05:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c8209626-be89-42cf-a51a-4a3ce0be39e5" Target="#_475516d9-9307-4698-9d17-113ae631d354"><Timestamp>2020-01-11 20:07:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
