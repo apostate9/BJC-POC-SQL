@@ -296,7 +296,7 @@
       <column comment="" key="false" length="255" name="ORDER_ID" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="500" name="ORDER_TS" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="500" name="ORDER_TS" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="500" name="DRUG_NAME" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -324,7 +324,7 @@
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="Out_to_Insert" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="FromExt.ORDER_ID" name="ORDER_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="FromExt.ORDER_TS == null ? null : TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,FromExt.ORDER_TS) " name="ORDER_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="FromExt.ORDER_TS " name="ORDER_TS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromExt.DRUG_NAME" name="DRUG_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromExt.ADMIN_TS " name="ADMIN_TS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromExt.STATUS" name="STATUS" nullable="true" type="id_String"/>
@@ -386,7 +386,7 @@
       <column comment="" key="false" length="255" name="ORDER_ID" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="500" name="ORDER_TS" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="500" name="ORDER_TS" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="500" name="DRUG_NAME" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -455,13 +455,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_46b485db-87ed-4c0e-bb13-edfd296a154e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>G0MUd4P6pA85DbVxJVl76gelG6J0P3FI+azZrreiAGx1qnZ4VWkDILD6Pzx4GQp2u2wi8qzBm+v5
-VaoFp5bG5A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2bc12aec-65dc-416a-88f6-ff1b06ffdbec"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BJQ0Mw6+z/cDaiZKuqOdVtriGov8r1/utQxyBhj1NrAol93OdDKiVcJlP2AuHPKNsyK0zDNcu32f
-EiCRbFfNwA==</DigestValue></Reference></SignedInfo><SignatureValue>Yx1bA6jO9CyOu2MQkE7+GlKuDCMbUUYJsy/QaVSkjw8sDbxTnlhW5cfNjmPReW7s1SmLyGamVPVC
-VNr00iS9mZm/TelELGRLkC+LF5atLvQoWluuGSOucKr96x4tF+1R7YrInz5DiCNj9cGiyUj3fpQo
-ygWmM2QeQAQxP1PWm6QBWBYvPfz/qL0kfDKfSTjS+ELRFL9DIrQ+TRZSfUWyWqvys4ulGB/+1y0q
-c1+AqTJ+lv1eLFch44MOIvcX4+9W7GPHSQuSrP+c1mqwM16+Lium2cUwnpgVFhW07jnAjpsnPYzw
-fizWRuTCv1e+6eApLQY/a3u0iF4s2gQTrk5BLA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1ff86e88-885d-4c53-a3ad-23c1aabb57eb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FQ1PSis3ATfmxVKoD61kVtjIfh/F4T0u2X0SY89ezQg6Xvjf4UHUErIsGpOiUCYFiKpOV/Xv4IAN
+SoslAutR4Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b3470b8f-23e2-4676-ae10-fbf7244cf80d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GM521vx+xEXW0Jj5iR+f1pL6bY+SMQPbe3QKfcn2b1TysEqGJYgf5Sshdwf1/l38QNI9Z7ENesOK
+NrjrR8Eebw==</DigestValue></Reference></SignedInfo><SignatureValue>eMviS8yPLnxEafdniaD0iCbgzLqTOQYAeJ52t8blFLqpLeRyC0Y1yndrdJzG4AQfSgYjf/vee9Ts
+JKAR11gbqxsnX/aNIlxGBf7mM/xz2h+xAWQfYTY8oKUui/noqnsPF3jLVix2q0E+1ICcyxm6Uczc
+iat6iwxNjHENdup2KPcsnwYS7jbn89/OTho5ZsQEiF3K+gxAsGgfJduqxqC52hTCRSOXF/X5IWPR
+Y6EYTRxvqALBcNKPR3SUZOoeh01vjxDpuF0XysG32dDasue9Qw4fxXEmm+jMxFu9RIbDg/wq1PUy
+9Oam1536gl1PXArzelkFczXZGeWVKcloFzFlfw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -483,4 +483,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2bc12aec-65dc-416a-88f6-ff1b06ffdbec" Target="#_46b485db-87ed-4c0e-bb13-edfd296a154e"><Timestamp>2020-01-11 17:36:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b3470b8f-23e2-4676-ae10-fbf7244cf80d" Target="#_1ff86e88-885d-4c53-a3ad-23c1aabb57eb"><Timestamp>2020-01-11 17:36:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
