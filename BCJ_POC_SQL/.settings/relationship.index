@@ -9,6 +9,10 @@
     "version" : "Latest",
     "type" : "property"
   }, {
+    "id" : "_OOD_0DJ6Eeqx0pF_arEPog",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "DQTechnical",
     "version" : "Latest",
     "type" : "routine"
@@ -68,6 +72,14 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
+  }, {
+    "id" : "_OOD_0DJ6Eeqx0pF_arEPog - MANAGED_TABLE_CHKSUM",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_OOD_0DJ6Eeqx0pF_arEPog - STD_MEDICATION_ADMINISTRATION_MASTER_CHKSUM",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
