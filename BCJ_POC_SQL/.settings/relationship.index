@@ -404,6 +404,10 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
+  }, {
+    "id" : "_OOD_0DJ6Eeqx0pF_arEPog - MANAGED_TABLE_CHKSUM",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
