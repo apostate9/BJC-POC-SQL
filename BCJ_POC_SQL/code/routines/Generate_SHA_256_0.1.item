@@ -4,26 +4,23 @@ import java.security.MessageDigest;
 import java.math.BigInteger;
 
 public class Generate_SHA_256 {
-public static String getMD5HashedPassword(String password, String salt) {
-    String sTH;
-    if(password == null) {
-    if(salt == null) sTH = "";
-    else sTH = salt;
-    }
-    else {
-    if(salt == null) sTH = password;
-    else sTH = password + salt;
-    }
-   
-    try {
-    MessageDigest md5 = MessageDigest.getInstance("SHA-256");
-    md5.update(sTH.getBytes());
-    BigInteger hash = new BigInteger(1, md5.digest());
-    return hash.toString(16);
-    } 
-    catch (Exception e) {
-    return null;
-    }
-   }
-}
+ public static String getMD5HashedPassword(String password, String salt) {
+  String sTH;
+  if (password == null) {
+   if (salt == null) sTH = "";
+   else sTH = salt;
+  } else {
+   if (salt == null) sTH = password;
+   else sTH = password + salt;
+  }
 
+  try {
+   MessageDigest md5 = MessageDigest.getInstance("SHA-256");
+   md5.update(sTH.getBytes());
+   BigInteger hash = new BigInteger(1, md5.digest());
+   return hash.toString(16);
+  } catch (Exception e) {
+   return null;
+  }
+ }
+}
