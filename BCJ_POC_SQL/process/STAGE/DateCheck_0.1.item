@@ -457,8 +457,6 @@
   </node>
   <node componentName="tSQLDWHOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHOutput_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value=""/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
@@ -607,8 +605,6 @@
   </node>
   <node componentName="tSQLDWHOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHOutput_2"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value=""/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_3"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
@@ -808,13 +804,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_82368305-d3ee-4be7-8420-0d99b1468a8f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EpuMqZyjh20sIP/gurSftcJ9j3VVwiMQJs9LNN5rqGRDVhcLt+Gq0SmvD0VQ2/Wx5TNQgZ8hZojE
-17lbSFxowQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0bc7ddd9-131a-415f-b3fe-601b861094f7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>i8QVDCQF/ODoFcKGFfPBdHrskNbR0ZLd/mum8q0pyIf+Y6QZa6Ey/61cL9P+ctvGgsQVEem/2318
-xLd1ahPYQg==</DigestValue></Reference></SignedInfo><SignatureValue>a06nCjZ5LK2sf8gdFI/moN+yhTeatZBEf7Mv3oBumh9IlfHomiyYrw9IO09nFkgBpv87HHQh2hA1
-bA/IiR0LMH/kKAMSAyLGVktT64Rs+RKabupbPqpOTS0Rez3Iugd3c+YNFDAOklZROU1gHNejMUu4
-x3w+i38orQNglnJm9TBoQwdkbrhSjE2aG77ZFRTIYkNDyGn9JpxqnfgAJkqX1KVWrh3Lzjum41u/
-Pi6VeQ7bRrUa0B864PWXHZkpIVnIXvcZRxFWCzfXKan3BXPEt9AWVd04CgKIomu1gfS2RhF7Y0UN
-vuDVPp79ebXhKiOhuq/EvoCPH/te3mOu3h6+4w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_552ff0af-b790-4a31-b9e9-2e2d9a205002"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Y03/7ZMrERLaYKVvWMGh51LgRAsTEiuPnLKYTuTfy+FIPgJe1jOqfPNvuKzPcgmQCjsiGtQ+qDgZ
+cAGGadLsug==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d5bb7db6-5d0d-4bbc-8548-8d53f4994def"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>H9cNj8/c9zMaDAo6fF7fH/ddFE10XwsPuoxCumfK9+d9IKtQcxuxXRV2dJ22uBRs9z8Zm/WKvD8z
+E9Q9F9KyoA==</DigestValue></Reference></SignedInfo><SignatureValue>R8iCVoPinBVkGq6Gi3fcJ/5Ulp2U7OVR4N37BJ1hSlCWhillM4wQqw8paK3k6kZlnBnZ0/OuRth2
+U9oA4kcoprViDHi6FgngUX8LBCLAUNv1AiuXbOgodgf3HPUSJ4ykqEydXRT6JqXhxJDgzW3mUi4e
+GomQhFHdVxlapAm0hz80BQUZCAzXQzNPcs6N2t0esj3RDtVg6wyMl8hJtE6+MVn1HW+xSazRid+F
+EZX9/Gk6aLYBa5lUBZJao2pAM+IxbvmDdjvrrtGh7GNdgUOi6yW6UdW1bWzYGCc4VGox3cpzBaHn
+D1lopYko3N5+hS39rXNrTIYhj/HuImRu6s8nEw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -836,4 +832,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0bc7ddd9-131a-415f-b3fe-601b861094f7" Target="#_82368305-d3ee-4be7-8420-0d99b1468a8f"><Timestamp>2020-01-11 18:06:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d5bb7db6-5d0d-4bbc-8548-8d53f4994def" Target="#_552ff0af-b790-4a31-b9e9-2e2d9a205002"><Timestamp>2020-01-11 18:06:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
