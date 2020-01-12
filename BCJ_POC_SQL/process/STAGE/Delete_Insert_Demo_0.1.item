@@ -412,19 +412,19 @@
   </node>
   <node componentName="tSQLDWHBulkExec" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="160" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHBulkExec_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_eT4oUDT1Eeq22JRcHVDhNQ"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_2"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;sb-dev-sql.database.windows.net&quot;"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;DW_STAGE&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;sb-dev-dw&quot;"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tSQLDWHConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;sb-dev-sql.database.windows.net&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;DW_STAGE&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;sb-dev-dw&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="USER" show="false" value="&quot;sb-admin&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="p2FjNM2tw0qCCa+Ko99o3A=="/>
-    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;sb-admin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="p2FjNM2tw0qCCa+Ko99o3A=="/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;MANAGED_TABLE_CHKSUM&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
@@ -480,7 +480,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHCommit_2"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_2"/>
     <elementParameter field="CHECK" name="CLOSE" value="true"/>
-    <elementParameter field="TEXT" name="LABEL" value="DWH_Ext_Commit"/>
+    <elementParameter field="TEXT" name="LABEL" value="DWH_STAGE_Commit"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSQLDWHCommit_2"/>
   </node>
@@ -572,13 +572,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_882df8e9-dec1-49f8-95d7-021b0dbe6515"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rpkJmDyd3P0adSsYeS/55LwhmT987253aHhwEzQ2Av7IdKBUz3LwmbHXS4oy9gO3zS/qTsUGWqyx
-z9liaHbMbA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4a96c679-1c9f-469c-884c-1f8f822a4de2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PPDs+AF5oTdRBUupM8n4iSVuBy2cW3IKTEKWdBt8z+w3RbyY/63pFf+2pX5gKqpGXATBfhEm2WEJ
-UmBP9ocN1A==</DigestValue></Reference></SignedInfo><SignatureValue>Ylp+Jp8HrObWup7ppNfe5K5aq3ldsJgq/d72KrTJI5hdDlL2MeClHYyaafV7xrx+1uFpSEJT6a2J
-bOv7oyj4JgxjZgDYIzxuUWS9+0k55CHTpBTDA8z4a+zDcfgdIf0jLR2eCutBnaLF5IzWuuDxnI1X
-US6dfri7u1kuv31QmmAw/lwtV8cbLyfehH6NWYCC7iAKndXKw9Yr2F7+/JiOhD7r6JeqvhmGkGfP
-UhNhhyP0Jkg561qvYP1woDhIa728RIoEyh0hvQVloxvhKIbgeDqC28r3M/I5y+TQOk5vYtJsxWN3
-ypT2qXfAW7FpA2M6s2LnG+LCfuv3mBz6RbpCBg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f484d247-daaf-4b16-9dab-d882239b524a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sNpdleAA5+BkUecQiwm9tKxLPi6wt7vEXu0mgq2HyTHml9eMvR2itQv/QD3geQKAnMNELPGx0AWY
++zT0RA1E5w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_eb31ea36-b02b-4f7c-92ce-2b02e058e4a6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GQzVr682X7jvPvxsAdRwA+QWCsI1zwre9GClkM9AGevQTLoOyURWmr7NM7bt9Q/cMKjvfB3irmp1
+kiHeTUB4Gg==</DigestValue></Reference></SignedInfo><SignatureValue>ZiKnNfR6inP6FMbbXTseaq8ZiDOAW4vi/S7lQOI0jHZxdSWMtuRqN003ZY0OXHP0+LgheIft8+MV
+QsCiaIImXO2rqLHZUpPBcoER6DUPjgkaGRXTY3PQHVP+RRr9uyf2ekwl7SGR0yCoQpzmUy4ZVxER
+meEjxH5rRrjexw161GLitjuQjRVGJBwUYqU1ZqxjvZws529/emriHcgdIoArruT6spumjpBc8o76
+xKPTrQ+/p2oJdwfw+gcJnEGlMqSLlsVKIZKQY63tDXOi1xZeZpgyFKxswO3hWDKoB2vaN5hKVTVz
+hylmhTsllTU3DIpCHCEGyLmIJqCbTiq2lp9QKw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -600,4 +600,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4a96c679-1c9f-469c-884c-1f8f822a4de2" Target="#_882df8e9-dec1-49f8-95d7-021b0dbe6515"><Timestamp>2020-01-12 19:37:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_eb31ea36-b02b-4f7c-92ce-2b02e058e4a6" Target="#_f484d247-daaf-4b16-9dab-d882239b524a"><Timestamp>2020-01-12 19:38:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
