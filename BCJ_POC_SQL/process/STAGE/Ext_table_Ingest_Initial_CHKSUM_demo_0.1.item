@@ -127,12 +127,12 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;full_Load&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;full_Load_sample&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT ext.full_Load.ORDER_ID,&#10;&#9;&#9;convert(datetime, ext.full_Load.ORDER_TS, 120) ORDER_TS,&#10;&#9;&#9;ext.full_Load.DRUG_NAME,&#10;&#9;&#9;convert(datetime, ext.full_Load.ADMIN_TS, 120)  ADMIN_TS,&#10;&#9;&#9;ext.full_Load.STATUS,&#10;&#9;&#9;ext.full_Load.CURATED_STATUS,&#10;&#9;&#9;CONVERT(datetime, sysdatetime() ,120) as INSERT_TS,&#10;&#9;&#9;CONVERT(datetime, sysdatetime() ,120) as UPDATE_TS,&#13;&#10;        HASHBYTES('SHA2_256', coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.DRUG_NAME,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ADMIN_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.CURATED_STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.INSERT_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.UPDATE_ts,'')) as CHKSUM&#10;FROM&#9;ext.full_Load&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT ext.full_Load.ORDER_ID,&#10;&#9;&#9;convert(datetime, ext.full_Load.ORDER_TS, 120) ORDER_TS,&#10;&#9;&#9;ext.full_Load.DRUG_NAME,&#10;&#9;&#9;convert(datetime, ext.full_Load.ADMIN_TS, 120)  ADMIN_TS,&#10;&#9;&#9;ext.full_Load.STATUS,&#10;&#9;&#9;ext.full_Load.CURATED_STATUS,&#10;&#9;&#9;CONVERT(datetime, sysdatetime() ,120) as INSERT_TS,&#10;&#9;&#9;CONVERT(datetime, sysdatetime() ,120) as UPDATE_TS,&#13;&#10;        HASHBYTES('SHA2_256', coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.DRUG_NAME,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ADMIN_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.CURATED_STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.INSERT_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.UPDATE_ts,'')) as CHKSUM&#10;FROM&#9;ext.full_Load_sample&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -274,6 +274,7 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="MANAGED_TABLE_CHKSUM"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="full_Load" name="tSQLDWHOutput_2">
       <column comment="" key="true" length="255" name="ORDER_ID" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -1130,13 +1131,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d6e4efbe-bebd-4807-a64b-74bb0611465c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rk9FzDh2yAOCdGA9/Qb9gKmcnp1hR/JlUOy79PwQLer+dhAdSarpeJZDt9USJjAuvvbivzChRAKb
-5GjtsBbwGw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cb58c793-2253-436e-9107-fe6da3cd9d5c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JY9XPmIP3D65A0CblNpQK2TZYk8itK142w+N6xdl0fPtC9BXDvL0wpQ+PxDkl8hPQ5FCc1KgzHuZ
-aMQQ61T9JA==</DigestValue></Reference></SignedInfo><SignatureValue>j6/Iv/PJ23MqxkopC6v1wOLhPfkPCBvqTwU/+pv06m2sP4YF6NdXZs6IlCRNRKT9uCyUsveWI/ld
-m9cfdMzLqN2v46Y46tbDg50V/L6jBOLiEl7fyYjCMs8axxpJ9exjlgVAkg8Bm4tXiGB9+unypMZf
-Mo6aFl0y/P9qXKFhurgquAz+hcLCcrV8IeJQSv4llHjB+RY3ugNHStR71kX35xZQdV1Aivgm9O6b
-jk1xAbfywr/wL7de5TQJUHuT6/yWOktgepaaqu7SOuA6VFfI19XoBiKZIgqIHXA1EbBevWSo0fsI
-3ia62QPZiTUYBM3ksUMk51J5sWEGXBCg7EZSxw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c05c5c8e-6ded-41c4-aa14-cd2154265e77"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+0pkg4+LiMd1v+mlXDFEixJQO7dRWQTgGP7mBm7ouzyzNjZXwf3sy/s0SNMu6GcnWOq00WcdVD74
+0vBCaImCGQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_06547811-e1e2-4984-9374-1f9852104df1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>s0IQUYtjmozbqSdHmC/gHw3LiK10rJWloTfypwX7gBkPA8Zu4qB4l3cpZYMZGq77KLKFZYsAqEXG
+Fw6Gr9vZDQ==</DigestValue></Reference></SignedInfo><SignatureValue>ceUb/ZS9ZQeLgtGKr973Kn3qugvFAJCvCKXNx7LITTrrmxX3jLfqvQmN6kCgoxNkJ+nUbdHKPvYd
+++3ThdO7HeOvbv3ooSuvGE40BE87pIjvHikv11aRfb5cL1uYg9IDMhnyQ/Wkan+MU4NiklCrb183
+mPvY47zXcnsE8zaFJgU08cdD24dyqC6jnCU0IJawBZ90F2TYlI6+LVHq2JWM2z6tdJIPCBXYuM4Y
+84b2vkAsK8Mb4O9HKsY9B0tyyJXnUVHfnZyElwKpfJXeuGbN56aKMA6xzu6RPt9D6QPR1nbx9YSz
+GbX5Cnr2q/GLlqzJCy52s3GaZgoSSwpE2n0oDg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1158,4 +1159,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cb58c793-2253-436e-9107-fe6da3cd9d5c" Target="#_d6e4efbe-bebd-4807-a64b-74bb0611465c"><Timestamp>2020-01-12 03:42:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_06547811-e1e2-4984-9374-1f9852104df1" Target="#_c05c5c8e-6ded-41c4-aa14-cd2154265e77"><Timestamp>2020-01-12 04:02:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
