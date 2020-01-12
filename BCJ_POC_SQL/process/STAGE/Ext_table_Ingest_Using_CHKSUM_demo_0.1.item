@@ -448,7 +448,7 @@
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="1000000"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="full_Load" name="tSQLDWHOutput_1">
       <column comment="" key="true" length="255" name="ORDER_ID" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -590,7 +590,7 @@
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="1000000"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Out_to_Insert" name="tSQLDWHOutput_2">
       <column comment="" key="true" length="255" name="ORDER_ID" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -951,7 +951,7 @@
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="1000000"/>
     <elementParameter field="TEXT" name="LABEL" value="STD_MED_ADMIN_MASTER"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Out_To_Insert2" name="tSQLDWHOutput_3">
@@ -1062,7 +1062,7 @@
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="1000000"/>
     <elementParameter field="TEXT" name="LABEL" value="STD_MED_ADMIN_MASTER"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Out_to_Update2" name="tSQLDWHOutput_4">
@@ -1488,7 +1488,7 @@
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="1000000"/>
     <elementParameter field="TEXT" name="LABEL" value="MED_ADMIN_FACT"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Out_To_Update3" name="tSQLDWHOutput_5">
@@ -1620,7 +1620,7 @@
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="1000000"/>
     <elementParameter field="TEXT" name="LABEL" value="MED_ADMIN_FACT"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="To_Insert" name="tSQLDWHOutput_6">
@@ -2010,13 +2010,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0a14c8c6-ae16-403e-aa7e-0e9b057d75fc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5MjPOEtrpLW5OwRskMvjF0bK7THnF+MMw2PuWoa4Mjc4Xn2zdi9lvn6iiGiQgf5W6tjXviD7U3dC
-a44Svbp6Gw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3a47ddfa-d4c3-496c-8f84-e66f01413909"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>B7+D/9cYQ0jlWPg1WiZTA5qiEMeInt3RwBPBhBC4pP5CpszFEo+XGKGf83Yvvmh0rVMcnly9uUUs
-8V/dG4iWnw==</DigestValue></Reference></SignedInfo><SignatureValue>HDr9q9B+dCyGxYFjXnpCcnay6eDu1XWOPB35R89pBzutRPkZH9uCSJlk+HU5i3IwqzMn23U0BttZ
-5CjYSqO8Xbyl7cKYLF1KJ0syO1C672mdbpe6CopZFCZc5iH3R1UhqchYTzdaSibhYlxDsnZp0qxR
-028ji6luhxmbbfl5jpWnRBZE3GIC47ck4ung9XexaAjEzXT9eojHdpl6tWWa26A/b97ZpzS9+VNh
-4qS744OBWuQfIGN+mWE10h/0y7LZ0SlJU2sjfaMYP31vxBWrb36jFy3LAYUC0W3+iI7PALrgpIxA
-q+ZInCzC4ZmD2ilcbXgka/29wGcGeRZThsolHA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e59a5c8f-bcfc-4e12-a975-6875570c4d8d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TC5GEzhj1GpIJxcQHjLCHtFIbA7PbwHFvHLeo4f7PxkH8u2D/waVBAGMssavsV8qIvCz/Nrk37OS
+9j52Kvlejw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0d2af81b-297e-4da1-b596-57fd58dd2fbf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>M+/XbXG7Ix2kajNEeQM/cZQb/t8hOvZ9psNTdRMKSqJSidx1jFzbeDtxjwncrkDMQw/ZOJGQtrWp
+g3XZOn1DTw==</DigestValue></Reference></SignedInfo><SignatureValue>iwdDvm3FljG13MmHZNK+Sk6OD9XHuxDd/GBreJ3ZbZOoYVZaSHJR4oidMx5xLbRMxBgoRxOq1xJH
+XPS8NPwBZAU5KvfxESZgaLEQi+ojHXlDp/cQQgaS9Ar4GQzYdlrH3dc4kvJgfd1ajxOCKGtqF0BH
++XQ65jp7r46RYJC0J+8HmQXTI7msnjc7GZyW8JkTTWF0q4Scbwd9CRFiN5z+ttKOV7XkUKttJ116
+4eUgz1/pn7lPycAZ8nMy1V77Bxqsfhn7tvk5DJUkocZ0fGs42L+7hoyrXP3Y63381OCNil0646tO
+GLOB2z7yKneKQefiQcciO1ohUT4ClWJObsmLBw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -2038,4 +2038,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3a47ddfa-d4c3-496c-8f84-e66f01413909" Target="#_0a14c8c6-ae16-403e-aa7e-0e9b057d75fc"><Timestamp>2020-01-11 21:31:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0d2af81b-297e-4da1-b596-57fd58dd2fbf" Target="#_e59a5c8f-bcfc-4e12-a975-6875570c4d8d"><Timestamp>2020-01-12 18:53:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
