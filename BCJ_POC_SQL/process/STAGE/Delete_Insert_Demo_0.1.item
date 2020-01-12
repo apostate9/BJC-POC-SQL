@@ -412,8 +412,6 @@
   </node>
   <node componentName="tSQLDWHBulkExec" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="160" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHBulkExec_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_eT4oUDT1Eeq22JRcHVDhNQ"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tSQLDWHConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
@@ -439,7 +437,7 @@
     <elementParameter field="TEXT" name="AZURE_LOCATION" value="&quot;BJC_DEMO&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="CLOSED_LIST" name="IMPORT_TYPE" value="DELIMITED_TEXT"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
     <elementParameter field="CHECK" name="USE_STRING_DELIMITER" value="false"/>
     <elementParameter field="TEXT" name="STRINGDELIMITER" show="false" value="&quot;\&quot;&quot;"/>
     <elementParameter field="CHECK" name="DATE_FORMAT" value="false"/>
@@ -572,13 +570,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f484d247-daaf-4b16-9dab-d882239b524a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sNpdleAA5+BkUecQiwm9tKxLPi6wt7vEXu0mgq2HyTHml9eMvR2itQv/QD3geQKAnMNELPGx0AWY
-+zT0RA1E5w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_eb31ea36-b02b-4f7c-92ce-2b02e058e4a6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GQzVr682X7jvPvxsAdRwA+QWCsI1zwre9GClkM9AGevQTLoOyURWmr7NM7bt9Q/cMKjvfB3irmp1
-kiHeTUB4Gg==</DigestValue></Reference></SignedInfo><SignatureValue>ZiKnNfR6inP6FMbbXTseaq8ZiDOAW4vi/S7lQOI0jHZxdSWMtuRqN003ZY0OXHP0+LgheIft8+MV
-QsCiaIImXO2rqLHZUpPBcoER6DUPjgkaGRXTY3PQHVP+RRr9uyf2ekwl7SGR0yCoQpzmUy4ZVxER
-meEjxH5rRrjexw161GLitjuQjRVGJBwUYqU1ZqxjvZws529/emriHcgdIoArruT6spumjpBc8o76
-xKPTrQ+/p2oJdwfw+gcJnEGlMqSLlsVKIZKQY63tDXOi1xZeZpgyFKxswO3hWDKoB2vaN5hKVTVz
-hylmhTsllTU3DIpCHCEGyLmIJqCbTiq2lp9QKw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a72c5622-f773-41d7-9d2f-89db6820ea9c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3vzTTJy+bkMv5LU6sY/7hO1u/HpYINKX4tnb4TDo8C6MgruOETml9DvwnZLkG6uRXr4WGegMWuq6
+iXwV+fRZYA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_14cd0c74-c4c1-4783-960a-13e688f63037"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+GXRVUVOZjt7lGxYasF+mbcsYQeZowl9XbutCE5twc/+x1yTx1s2l40gLLGXqs40uMd5YXN6S1TK
+8GRlufEIow==</DigestValue></Reference></SignedInfo><SignatureValue>i/QSTTqO9EaUStN7GiYQsrpmLd8KKBKTWbEz1dK95it3naFTerEEwEOtKbeT3xclHel8ownv7gWY
+3Hmu7lKXQsFT6yYoA1Cl0/lcjpa2NpArHBSb8huQ2cpksHV44ss41PYD/FcfLC2/EokuVGu7NnP+
+NkhqYdfVzvD0L1MtEiVKHmv5T4OWn3YG2FqaP5OeOsSt5KAv7ilHHEJsdiffNYgVOV1NeQYo8bYt
+l23PR8N2XMiqTamiJJOa+ITd1EvhXqVYxv9u9RGmAUF1vkGQoX+7LAMDHUeY69mb2NcJCfLks9H6
+kMJoqT/nrkjQa/1mcRhUZK7LCwAtEg+FwCNBOg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -600,4 +598,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_eb31ea36-b02b-4f7c-92ce-2b02e058e4a6" Target="#_f484d247-daaf-4b16-9dab-d882239b524a"><Timestamp>2020-01-12 19:38:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_14cd0c74-c4c1-4783-960a-13e688f63037" Target="#_a72c5622-f773-41d7-9d2f-89db6820ea9c"><Timestamp>2020-01-12 19:39:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
