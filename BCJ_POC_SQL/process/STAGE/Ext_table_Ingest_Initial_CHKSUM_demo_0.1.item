@@ -132,7 +132,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT ext.full_Load.ORDER_ID,&#10;&#9;&#9;ext.full_Load.ORDER_TS,&#10;&#9;&#9;ext.full_Load.DRUG_NAME,&#10;&#9;&#9;ext.full_Load.ADMIN_TS,&#10;&#9;&#9;ext.full_Load.STATUS,&#10;&#9;&#9;ext.full_Load.CURATED_STATUS,&#10;&#9;&#9;ext.full_Load.INSERT_TS,&#10;&#9;&#9;ext.full_Load.UPDATE_TS,&#13;&#10;        HASHBYTES('SHA2_256', coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.DRUG_NAME,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ADMIN_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.CURATED_STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.INSERT_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.UPDATE_ts,'')) as CHKSUM&#10;FROM&#9;ext.full_Load&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT ext.full_Load.ORDER_ID,&#10;&#9;&#9;convert(datetime, ext.full_Load.ORDER_TS, 120) ORDER_TS,&#10;&#9;&#9;ext.full_Load.DRUG_NAME,&#10;&#9;&#9;convert(datetime, ext.full_Load.ADMIN_TS, 120)  ADMIN_TS,&#10;&#9;&#9;ext.full_Load.STATUS,&#10;&#9;&#9;ext.full_Load.CURATED_STATUS,&#10;&#9;&#9;CONVERT(VARCHAR, sysdatetime() ,120) as INSERT_TS,&#10;&#9;&#9;CONVERT(VARCHAR, sysdatetime() ,120) as UPDATE_TS,&#13;&#10;        HASHBYTES('SHA2_256', coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ORDER_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.DRUG_NAME,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.ADMIN_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.CURATED_STATUS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.INSERT_TS,'') + '|' +&#13;&#10;                              coalesce(ext.full_Load.UPDATE_ts,'')) as CHKSUM&#10;FROM&#9;ext.full_Load&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -189,74 +189,6 @@
       </column>
       <column comment="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="8000" pattern="" precision="-1" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
     </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_Z4YOsDTnEeq22JRcHVDhNQ-tMap_1-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="Out_to_Insert" name="Out_to_Insert">
-      <column comment="" key="true" length="255" name="ORDER_ID" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="500" name="ORDER_TS" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="500" name="DRUG_NAME" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="500" name="ADMIN_TS" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="500" name="STATUS" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="8000" name="CHKSUM" nullable="true" originalLength="8000" pattern="" precision="-1" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="Out_to_Insert" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="FromExt.ORDER_ID " name="ORDER_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="FromExt.ORDER_TS == null ? null : TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,FromExt.ORDER_TS) " name="ORDER_TS" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="FromExt.DRUG_NAME " name="DRUG_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="FromExt.ADMIN_TS == null ? null : TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,FromExt.ADMIN_TS ) " name="ADMIN_TS" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="FromExt.STATUS " name="STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="FromExt.CURATED_STATUS " name="CURATED_STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.getCurrentDate() " name="INSERT_TS" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="TalendDate.getCurrentDate() " name="UPDATE_TS" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="FromExt.CHKSUM " name="CHKSUM" nullable="true" type="id_Object"/>
-      </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="FromExt" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="ORDER_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORDER_TS" nullable="true" type="id_String"/>
-        <mapperTableEntries name="DRUG_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ADMIN_TS" nullable="true" type="id_String"/>
-        <mapperTableEntries name="STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries name="CURATED_STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries name="INSERT_TS" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UPDATE_TS" nullable="true" type="id_String"/>
-        <mapperTableEntries name="CHKSUM" nullable="true" type="id_Object"/>
-      </inputTables>
-    </nodeData>
   </node>
   <node componentName="tSQLDWHOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHOutput_2"/>
@@ -1082,16 +1014,12 @@
     <elementParameter field="TEXT" name="LABEL" value="UDMH_DIM_Connector"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <connection connectorName="FLOW" label="FromExt" lineStyle="0" metaname="tSQLDWHInput_1" offsetLabelX="-8" offsetLabelY="1" source="tSQLDWHInput_1" target="tMap_1">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tSQLDWHInput_1" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_1" target="tSQLDWHOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="FromExt"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHInput_1" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_1" target="tSQLDWHInput_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk9"/>
-  </connection>
-  <connection connectorName="FLOW" label="Out_to_Insert" lineStyle="0" metaname="Out_to_Insert" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tSQLDWHOutput_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Out_to_Insert"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tSQLDWHInput_3" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_3" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1203,13 +1131,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d19845ce-a4be-4c23-9073-9f5619d5455b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rDflIJR6hbtQtrhoHcglLBU57ltI7QKKpnhcY3lURjsw7JqhGeD9FZCHfw2Vrzs2kukCgNOTbB87
-padRfjsVLw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_785e0cce-b326-4215-b5b9-08cc7b681ab4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vSRJOVc0fL0kqotZOU4GCDTBH3n4/9GUhAABhHl9vcvGrUtzNe/0os6e+9oxv7wqFhz5CPOb64rI
-ueoBs7r8jw==</DigestValue></Reference></SignedInfo><SignatureValue>aYz9M4EDWCT2fgvPkobe5rUJuewB8dVe8nSTfLZ3CsSWocEbavttll+DRbPWijqqFlihJkzKfyZa
-9RxB52VXKdUbXPzeikRHa2oLphO8Tlue1N+Dq81SxEh7qqsiZezkSVY844MgkyMPbVQxTpsGRG4E
-RnpMc4aLDp4uzfpZ/0ecs0HT2N0LodB739rUPPZWbRWA5TD/58f1MjtRyX7B94nue98Bjp3Gk9Sg
-ggxyihjwHpbnadk2Q62w0eSGlubkc8HLRz0Apd7iA9g6d6Uov9OW28ORHXwSkIz+18kJ7R3uXSvU
-jHEZlMLbQ5kzCVQ0Sbi4Z/UkAQXmWip5rP9BdQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3d3cd9f0-75e3-4ef1-8231-aea6c8c0a9c6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BWFhsxW1Q2IYb6TkGf6vHoYRA8clKYqyr5L9tmPgBmCpUsqraP8pR7u3Dii8GuEY1X8DDe7IizPc
+8LTGWJ0V7w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_db928ff3-6eab-4022-b4f9-f95977a4d3bc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>svLVsyZr7hU9Q03bE2UkpLZia45dlnKJjODqTUOlPb7s5gbBICgu1/Tw4/GLVApRlHHKoIwIIuDT
+BWKdwn4qJA==</DigestValue></Reference></SignedInfo><SignatureValue>ohVCU3+ludo6ayfxPv7IZ3rstX5N/DXQnVvObqvcKealDxXOaG8WqBeovd663lHekekS7wtU8hfY
+f3R55EmOeN5jk8rTMGQ3TbbmJNFgesrUByK2lpceHyVjXcTdoXRhpD8Nc2Nl2vcgtM2BJJKGPXA/
+PtxPIFxm0RJFmG6jxP8D3aAMDN4FylsGPdHOLXFohZmc7R5JH5m9+se3mxmlHzDjkfJWiQUwpYKV
+4ItK5lLOqk6TrzAB4jEs7hCjnw9wTWtCK3JQsdnXTCt2FOedahPRRIlb9HmE10k7FCRgaN4e7RpP
+hnOlL/sXXze+VVTcGfykPnxxibpkLDmW6vMdug==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1231,4 +1159,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_785e0cce-b326-4215-b5b9-08cc7b681ab4" Target="#_d19845ce-a4be-4c23-9073-9f5619d5455b"><Timestamp>2020-01-12 03:08:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_db928ff3-6eab-4022-b4f9-f95977a4d3bc" Target="#_3d3cd9f0-75e3-4ef1-8231-aea6c8c0a9c6"><Timestamp>2020-01-12 03:27:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
