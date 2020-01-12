@@ -586,10 +586,6 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
-  }, {
-    "id" : "_eT4oUDT1Eeq22JRcHVDhNQ - MANAGED_TABLE_CHKSUM",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
