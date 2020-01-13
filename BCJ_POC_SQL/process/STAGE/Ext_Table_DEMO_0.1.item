@@ -277,13 +277,13 @@
     </metadata>
     <metadata connector="FLOW" label="Out_to_Update_New" name="Out_to_Update_New">
       <column comment="" key="false" length="255" name="ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="ORDER_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="DRUG_NAME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
@@ -313,13 +313,13 @@
       </outputTables>
       <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID != null &amp;&amp; ext_IN.CHKSUM != ext_IN.CSM" name="Out_to_Update_New" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ext_IN.ORDER_ID " name="ORDER_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ext_IN.ORDER_TS " name="ORDER_TS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ext_IN.ORDER_TS == null ? null : TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,ext_IN.ORDER_TS) " name="ORDER_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ext_IN.DRUG_NAME " name="DRUG_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ext_IN.ADMIN_TS " name="ADMIN_TS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ext_IN.ADMIN_TS == null ? null : TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,ext_IN.ADMIN_TS) " name="ADMIN_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ext_IN.STATUS " name="STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.CURATED_STATUS " name="CURATED_STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.getCurrentDate() " name="INSERT_TS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="UPDATE_TS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.getCurrentDate() " name="INSERT_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="" name="UPDATE_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ext_IN.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ext_IN" sizeState="INTERMEDIATE">
@@ -479,13 +479,13 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Out_to_Update_New" name="tFileOutputDelimited_3">
       <column comment="" key="false" length="255" name="ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="ORDER_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="DRUG_NAME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="NVARCHAR" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
