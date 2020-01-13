@@ -296,7 +296,7 @@
         <mapperTableEntries expression="ext_IN.ADMIN_TS == null ? null : TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,ext_IN.ADMIN_TS) " name="ADMIN_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ext_IN.STATUS " name="STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.CURATED_STATUS " name="CURATED_STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.getDate(&quot;CCYY-MM-DD hh:mm:ss&quot;) " name="INSERT_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.getCurrentDate() " name="INSERT_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="" name="UPDATE_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ext_IN.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
@@ -308,7 +308,7 @@
         <mapperTableEntries expression="ext_IN.STS " name="STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.CTD_STS " name="CURATED_STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.INS_TS " name="INSERT_TS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.getDate(&quot;CCYY-MM-DD hh:mm:ss&quot;) " name="UPDATE_TS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.getCurrentDate() " name="UPDATE_TS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.CSM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID != null &amp;&amp; ext_IN.CHKSUM != ext_IN.CSM" name="Out_to_Update_New" sizeState="INTERMEDIATE">
@@ -318,7 +318,7 @@
         <mapperTableEntries expression="ext_IN.ADMIN_TS " name="ADMIN_TS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.STATUS " name="STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.CURATED_STATUS " name="CURATED_STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.getDate(&quot;CCYY-MM-DD hh:mm:ss&quot;) " name="INSERT_TS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.getCurrentDate() " name="INSERT_TS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="" name="UPDATE_TS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
