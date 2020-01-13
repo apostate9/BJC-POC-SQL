@@ -784,8 +784,9 @@
       <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="80" name="TENANT_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
