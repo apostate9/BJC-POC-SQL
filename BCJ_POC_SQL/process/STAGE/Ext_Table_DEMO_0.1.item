@@ -561,6 +561,7 @@
       <column comment="" key="false" length="500" name="INSERT_TS" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="UPDATE_TS" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="8000" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="CHG_IND" nullable="true" originalLength="1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1280">
@@ -600,7 +601,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into [DW_STAGE].[MANAGED_TABLE] SELECT * from [DW_STAGE].[MANAGED_TABLE_STAGE] WHERE CHG_IND = 'A';&#13;&#10;DELETE FROM [DW_STAGE].[MANAGED_TABLE] WHERE EXISTS (select 1 from [DW_STAGE].[MANAGED_TABLE_STAGE] S where S.ORDER_ID = [DW_STAGE].[MANAGED_TABLE].ORDER_ID;&#13;&#10;insert into [DW_STAGE].[MANAGED_TABLE] SELECT * FROM [DW_STAGE].[MANAGED_TABLE_STAGE] WHERE CHG_IND = 'U';&quot;&#13;&#10;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into [DW_STAGE].[MANAGED_TABLE] &#13;&#10;SELECT &#13;&#10;    ORDER_ID,&#13;&#10;    ORDER_TS,&#13;&#10;    DRUG_NAME,&#13;&#10;    ADMIN_TS,&#13;&#10;    STATUS,&#13;&#10;    CURATED_STATUS,&#13;&#10;    INSERT_TS,&#13;&#10;    UPDATE_TS,&#13;&#10;    CHKSUM&#13;&#10; from [DW_STAGE].[MANAGED_TABLE_STAGE] WHERE CHG_IND = 'A';&#13;&#10;insert into [DW_STAGE].[MANAGED_TABLE] &#13;&#10;SELECT &#13;&#10;    ORDER_ID,&#13;&#10;    ORDER_TS,&#13;&#10;    DRUG_NAME,&#13;&#10;    ADMIN_TS,&#13;&#10;    STATUS,&#13;&#10;    CURATED_STATUS,&#13;&#10;    INSERT_TS,&#13;&#10;    UPDATE_TS,&#13;&#10;    CHKSUM&#13;&#10; from [DW_STAGE].[MANAGED_TABLE_STAGE] WHERE CHG_IND = 'U';&#13;&#10;&quot;&#13;&#10;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1267,11 +1268,12 @@
       <column comment="" key="false" length="80" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="64" name="ADMIN_STATUS_CD_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="80" name="ADMIN_STATUS_CD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS_CD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="CRN_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="19" name="TENANT_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="CHG_IND" nullable="true" originalLength="1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="1120">
@@ -1291,7 +1293,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;insert into [DW_STAGE].[MEDICATION_ADMINISTRATION_FACT] SELECT * from [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT] WHERE CHG_IND = 'A';&#13;&#10;insert into [DW_STAGE].[MEDICATION_ADMINISTRATION_FACT] SELECT * from [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT] WHERE CHG_IND = 'U';&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT]&#13;&#10;SELECT &#13;&#10;    PHARAMCY_ORDER_BK,&#13;&#10;    PHARAMCY_ORDER_ID,&#13;&#10;    MEDICATION_TXT,&#13;&#10;    ORDER_TS,&#13;&#10;    ADMIN_TS,&#13;&#10;    ADMIN_STATUS_CD_DK,&#13;&#10;    ADMIN_STATUS_CD,&#13;&#10;    VALID_FROM_TS,&#13;&#10;    VALID_TO_TS,&#13;&#10;    TENANT_DK,&#13;&#10;    CRN_IND,&#13;&#10;    CHKSUM&#13;&#10; from [DW_STAGE].[MEDICATION_ADMINISTRATION_FACT] WHERE CHG_IND = 'A';&#13;&#10; SET IDENTITY_INSERT [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT] ON;&#13;&#10; insert into [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT]&#13;&#10;SELECT &#13;&#10;    MEDICATION_ADMINISTRATION_DK&#13;&#10;    PHARAMCY_ORDER_BK,&#13;&#10;    PHARAMCY_ORDER_ID,&#13;&#10;    MEDICATION_TXT,&#13;&#10;    ORDER_TS,&#13;&#10;    ADMIN_TS,&#13;&#10;    ADMIN_STATUS_CD_DK,&#13;&#10;    ADMIN_STATUS_CD,&#13;&#10;    VALID_FROM_TS,&#13;&#10;    VALID_TO_TS,&#13;&#10;    TENANT_DK,&#13;&#10;    CRN_IND,&#13;&#10;    CHKSUM&#13;&#10; from [DW_STAGE].[MEDICATION_ADMINISTRATION_FACT] WHERE CHG_IND = 'U';&#13;&#10;  SET IDENTITY_INSERT [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT] OFF;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
