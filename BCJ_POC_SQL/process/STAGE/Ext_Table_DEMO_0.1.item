@@ -676,7 +676,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT MT.ORDER_ID,&#13;&#10;&#9;&#9;MT.ORDER_TS,&#13;&#10;&#9;&#9;MT.DRUG_NAME,&#13;&#10;&#9;&#9;MT.ADMIN_TS,&#13;&#10;&#9;&#9;MT.STATUS,&#13;&#10;&#9;&#9;MT.CURATED_STATUS,&#13;&#10;&#9;&#9;MT.INSERT_TS,&#13;&#10;&#9;&#9;MT.UPDATE_TS,&#13;&#10;&#9;&#9;MT.CHKSUM&#13;&#10;FROM&#9;DW_STAGE.MANAGED_TABLE MT&#13;&#10;WHERE INSERT_TS &gt; (select top 1 LOAD_TS from DW_STAGE.LOAD_METADATA_TABLE WHERE TABLE = 'MANAGED_TABLE')&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT MT.ORDER_ID,&#13;&#10;&#9;&#9;MT.ORDER_TS,&#13;&#10;&#9;&#9;MT.DRUG_NAME,&#13;&#10;&#9;&#9;MT.ADMIN_TS,&#13;&#10;&#9;&#9;MT.STATUS,&#13;&#10;&#9;&#9;MT.CURATED_STATUS,&#13;&#10;&#9;&#9;MT.INSERT_TS,&#13;&#10;&#9;&#9;MT.UPDATE_TS,&#13;&#10;&#9;&#9;MT.CHKSUM&#13;&#10;FROM&#9;DW_STAGE.MANAGED_TABLE MT&#13;&#10;WHERE INSERT_TS &gt; (select top 1 LOAD_TS from DW_STAGE.LOAD_METADATA_TABLE WHERE [TABLE] = 'MANAGED_TABLE')&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
