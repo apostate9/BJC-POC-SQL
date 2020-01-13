@@ -21,6 +21,7 @@
     <module>jobs/process/STAGE/ext_table_ingest_initial_chksum_demo_0.1</module>
     <module>jobs/process/STAGE/copy_of_ext_table_ingest_using_chksum_demo_0.1</module>
     <module>jobs/process/STAGE/ext_table_demo_0.1</module>
+    <module>jobs/process/STAGE/copy_of_ext_table_demo_0.1</module>
   </modules>
   <properties>
     <signer.version>7.2.1</signer.version>
