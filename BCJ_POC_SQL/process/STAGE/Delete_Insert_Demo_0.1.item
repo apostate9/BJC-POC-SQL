@@ -993,7 +993,7 @@
       <column comment="" defaultValue="" key="false" length="19" name="TENANT_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateExpressionFilter="true" expressionFilter="From_MAM.MEDICATION_ADMINISTRATION_DK == null" name="Out_To_Insert_FACT" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_BK " name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
