@@ -441,7 +441,7 @@
     <elementParameter field="TEXT" name="STRINGDELIMITER" show="false" value="&quot;\&quot;&quot;"/>
     <elementParameter field="CHECK" name="DATE_FORMAT" value="true"/>
     <elementParameter field="TEXT" name="DATE_PATTERN" value="&quot;yyyy-MM-dd HH:mm:ss&quot;"/>
-    <elementParameter field="CHECK" name="USE_TYPE_DEFAULT" value="true"/>
+    <elementParameter field="CHECK" name="USE_TYPE_DEFAULT" value="false"/>
     <elementParameter field="CHECK" name="COMPRESS" value="false"/>
     <elementParameter field="CLOSED_LIST" name="COMPRESSION_TEXT" show="false" value="org.apache.hadoop.io.compress.DefaultCodec"/>
     <elementParameter field="CLOSED_LIST" name="COMPRESSION_RC" show="false" value="org.apache.hadoop.io.compress.DefaultCodec"/>
@@ -508,7 +508,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT MT.ORDER_ID,&#13;&#10;&#9;&#9;MT.ORDER_TS,&#13;&#10;&#9;&#9;MT.DRUG_NAME,&#13;&#10;&#9;&#9;MT.ADMIN_TS,&#13;&#10;&#9;&#9;MT.STATUS,&#13;&#10;&#9;&#9;MT.CURATED_STATUS,&#13;&#10;&#9;&#9;MT.INSERT_TS,&#13;&#10;&#9;&#9;MT.UPDATE_TS,&#13;&#10;&#9;&#9;MT.CHKSUM,&#13;&#10;&#9;&#9;MAM.PHARMACY_ORDER_BK,&#13;&#10;&#9;&#9;MAM.PHARMACY_ORDER_ID,&#13;&#10;&#9;&#9;MAM.MEDICATION_TXT,&#13;&#10;&#9;&#9;MAM.ORDER_TS AS ORD_TS,&#13;&#10;&#9;&#9;MAM.ADMIN_TS AS ADM_TS,&#13;&#10;&#9;&#9;MAM.VALID_FROM_TS,&#13;&#10;&#9;&#9;MAM.VALID_TO_TS,&#13;&#10;&#9;&#9;MAM.TENANT_BK&#13;&#10;FROM&#9;DW_STAGE.MANAGED_TABLE_CHKSUM MT&#13;&#10;LEFT JOIN UDMH_STD.STD_MEDICATION_ADMINISTRATION_MASTER MAM ON MT.ORDER_ID = MAM.PHARMACY_ORDER_ID&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT MT.ORDER_ID,&#13;&#10;&#9;&#9;MT.ORDER_TS,&#13;&#10;&#9;&#9;MT.DRUG_NAME,&#13;&#10;&#9;&#9;MT.ADMIN_TS,&#13;&#10;&#9;&#9;MT.STATUS,&#13;&#10;&#9;&#9;MT.CURATED_STATUS,&#13;&#10;&#9;&#9;MT.INSERT_TS,&#13;&#10;&#9;&#9;MT.UPDATE_TS,&#13;&#10;&#9;&#9;MT.CHKSUM,&#13;&#10;&#9;&#9;MAM.PHARMACY_ORDER_BK,&#13;&#10;&#9;&#9;MAM.PHARMACY_ORDER_ID,&#13;&#10;&#9;&#9;MAM.MEDICATION_TXT,&#13;&#10;&#9;&#9;MAM.ORDER_TS AS ORD_TS,&#13;&#10;&#9;&#9;MAM.ADMIN_TS AS ADM_TS,&#13;&#10;&#9;&#9;MAM.ADMIN_STATUS,&#13;&#10;&#9;&#9;MAM.VALID_FROM_TS,&#13;&#10;&#9;&#9;MAM.VALID_TO_TS,&#13;&#10;&#9;&#9;MAM.TENANT_BK&#13;&#10;FROM&#9;DW_STAGE.MANAGED_TABLE_CHKSUM MT&#13;&#10;LEFT JOIN UDMH_STD.STD_MEDICATION_ADMINISTRATION_MASTER MAM ON MT.ORDER_ID = MAM.PHARMACY_ORDER_ID&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -546,6 +546,8 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ADM_TS"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADMIN_STATUS"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="VALID_FROM_TS"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="VALID_TO_TS"/>
@@ -556,21 +558,22 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSQLDWHInput_2">
       <column comment="" key="false" length="255" name="ORDER_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="27" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="ORDER_TS" nullable="true" originalLength="-1" pattern="" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="DRUG_NAME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="27" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="CURATED_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="27" name="INSERT_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="27" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="INSERT_TS" nullable="true" originalLength="-1" pattern="" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="UPDATE_TS" nullable="true" originalLength="-1" pattern="" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="PHARMACY_ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ORD_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ADM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="ORD_TS" nullable="true" originalLength="-1" pattern="" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="ADM_TS" nullable="true" originalLength="-1" pattern="" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="TENANT_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -594,6 +597,7 @@
       <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="TENANT_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -604,6 +608,7 @@
       <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="TENANT_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -617,6 +622,7 @@
         <mapperTableEntries expression="FromMT.DRUG_NAME " name="MEDICATION_TXT" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromMT.ORDER_TS " name="ORDER_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="FromMT.ADMIN_TS " name="ADMIN_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="FromMT.STATUS " name="ADMIN_STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromMT.UPDATE_TS " name="VALID_FROM_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="null" name="VALID_TO_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="&quot;BJC&quot;" name="TENANT_BK" nullable="true" type="id_String"/>
@@ -627,6 +633,7 @@
         <mapperTableEntries expression="FromMT.MEDICATION_TXT " name="MEDICATION_TXT" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromMT.ORD_TS " name="ORDER_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="FromMT.ADM_TS " name="ADMIN_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="FromMT.ADMIN_STATUS " name="ADMIN_STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries expression="FromMT.VALID_FROM_TS " name="VALID_FROM_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="FromMT.UPDATE_TS " name="VALID_TO_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="FromMT.TENANT_BK " name="TENANT_BK" nullable="true" type="id_String"/>
@@ -646,6 +653,7 @@
         <mapperTableEntries name="MEDICATION_TXT" nullable="true" type="id_String"/>
         <mapperTableEntries name="ORD_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries name="ADM_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="ADMIN_STATUS" nullable="true" type="id_String"/>
         <mapperTableEntries name="VALID_FROM_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries name="VALID_TO_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries name="TENANT_BK" nullable="true" type="id_String"/>
@@ -689,6 +697,7 @@
       <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="TENANT_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -731,6 +740,7 @@
       <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="TENANT_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -806,6 +816,43 @@
       <column comment="" defaultValue="" key="false" length="80" name="TENANT_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHRow_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select id, name from employee&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSQLDWHRow_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tSQLDWHCommit_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
@@ -859,15 +906,28 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk14"/>
   </connection>
   <connection connectorName="FLOW" label="Out_to_MAM_Insert" lineStyle="0" metaname="Out_to_MAM_Insert" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tFileOutputDelimited_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="ADMIN_STATUS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Out_to_MAM_Insert"/>
   </connection>
   <connection connectorName="FLOW" label="Out_To_MAM_Update" lineStyle="0" metaname="Out_To_MAM_Update" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tFileOutputDelimited_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="ADMIN_STATUS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Out_To_MAM_Update"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tAzureStoragePut_2" offsetLabelX="0" offsetLabelY="0" source="tAzureStoragePut_2" target="tSQLDWHBulkExec_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk13"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHBulkExec_2" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHBulkExec_2" target="tSQLDWHRow_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk15"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
@@ -940,13 +1000,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7f03a253-7ebf-4e79-9921-75329778e0b8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RcICtpjHYdcBXs6sclm/Q1BYvsKkTMxSalQrozw9f4q44Jh9xMA+RWA3PVcW9FM8UP+pQ3VuTT++
-daush0WOUQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0b6cb115-76f6-4321-ad86-2b0ce6178d4d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0TI3IDHeOQEr4pDaSF5EVCd6TmDUNx/1qHUG5t5AB8hgA7KYWT1MCFo5aLSX7wjA8h4wSyMtEmRr
-duTyOH8tbg==</DigestValue></Reference></SignedInfo><SignatureValue>A8JMRR3cF+yv3e0lapL3RwHMFt+jz10DX3F0XR76Mf/9muSX+Rf/RvP0KtN051BZV888i9le/HIo
-z0AiUXz1CTF20Vp9JMUQ/i/orqgXEDmjdU/6aH+ReO78kuAEVHYbQb4vyUXZ589w4DON5dMAtri6
-7D1RXgPhkLLT4tzJLEKGRrVj18w00Evaj+xhXf7QyNfXq9G7ZPNzTL88t05hMwpO7JRnuJD3oKiC
-zUdrD99+EIT35X/pwB+/Sca1ebdRRbSrgHrkwYOHrL4SrFe9SBmzQ7JaPaF4CSsHAYuDMlsc2Yd5
-UXJX1ac/QjF6XDP7TJJQRtxQNotIzhDuSSGa6Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHRow_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_89b7d5e9-8201-46d9-9ac2-ad874a5bf0b6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>l4cuWgaOx8DQ0yuQsx5nzpIWGYocc6Sch9oeSRCBeGQssc0fFOqRFK7XXikORyF5xWnDmwy4USDd
+T6jcN9DJtg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b7f8db38-dede-450e-9397-7080a17ccd1f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ybWVv83p5kIjBk1sW+QJzpyRyOdPlTMOjMoJ2OmwJrSKTiZ7Pn/mPfyYL8sZHTYWVtLRgVp3tmPw
+OswjpRzyGA==</DigestValue></Reference></SignedInfo><SignatureValue>VriN1eTJ0tejeCbvz+aCOAFOkuZnaHlSf5pwurB5KjdqjEBLHPr07411Xb7aHLYUZX7Mfk/TnEsg
+jWOu0p+k/6hxI78ntw2F3gBsci9MDVLZMnHJW3h/j3R+YWbBmjsU/W1+03vdE4tHEwMjBAnSbNvj
+7ys31Kabmzz82lYyzMA88MuK1yi5xvfMdF8cx61AvsyavlF2mEqlFXIHCCwlZ6fygQKzX9TK1eg9
+GmGfZtrQPdxcsRwQ7w0Tj+7ruptSJ+ic+eXzwU4zvy719F5e6ltbYriZXMJ6zvNzAbLjyiqM2aQf
++0wP9UIdexo1SChIBwyvbNWtOY5cgJ2L4sBMvQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -968,4 +1033,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0b6cb115-76f6-4321-ad86-2b0ce6178d4d" Target="#_7f03a253-7ebf-4e79-9921-75329778e0b8"><Timestamp>2020-01-13 01:27:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b7f8db38-dede-450e-9397-7080a17ccd1f" Target="#_89b7d5e9-8201-46d9-9ac2-ad874a5bf0b6"><Timestamp>2020-01-13 02:24:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
