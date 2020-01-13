@@ -933,7 +933,7 @@
       <column comment="" key="false" length="-1" name="MEDICATION_TXT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ORDER_TS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="ADMIN_STATUS_CD_DK" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARBINARY" type="id_Object" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ADMIN_STATUS_CD_DK" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARBINARY" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ADMIN_STATUS_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
@@ -1032,7 +1032,7 @@
         <mapperTableEntries name="MEDICATION_TXT" nullable="true" type="id_String"/>
         <mapperTableEntries name="ORDER_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries name="ADMIN_TS" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="ADMIN_STATUS_CD_DK" nullable="true" type="id_Object"/>
+        <mapperTableEntries name="ADMIN_STATUS_CD_DK" nullable="true" type="id_String"/>
         <mapperTableEntries name="ADMIN_STATUS_CD" nullable="true" type="id_String"/>
         <mapperTableEntries name="VALID_FROM_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries name="VALID_TO_TS" nullable="true" type="id_Date"/>
