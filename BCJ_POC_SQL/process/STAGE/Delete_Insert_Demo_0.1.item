@@ -998,7 +998,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateExpressionFilter="true" expressionFilter="From_MAM.MEDICATION_ADMINISTRATION_DK == null" name="Out_To_Insert_FACT" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="null" name="MEDICATION_ADMINISTRATION_DK" type="id_Long"/>
+        <mapperTableEntries expression="" name="MEDICATION_ADMINISTRATION_DK" type="id_Long"/>
         <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_BK " name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_ID " name="PHARMACY_ORDER_ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.MEDICATION_TXT " name="MEDICATION_TXT" nullable="true" type="id_String"/>
