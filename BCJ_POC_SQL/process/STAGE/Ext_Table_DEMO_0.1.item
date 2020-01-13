@@ -584,7 +584,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSQLDWHCommit_2"/>
   </node>
-  <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="512">
+  <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHRow_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_2"/>
@@ -622,7 +622,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSQLDWHInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="640">
+  <node componentName="tSQLDWHInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHInput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_2"/>
@@ -681,7 +681,7 @@
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="640">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -735,7 +735,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="640">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_3"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
@@ -1174,17 +1174,17 @@
   </node>
   <node componentName="tSQLDWHBulkExec" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="352" posY="1120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHBulkExec_3"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_2"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;sb-dev-sql.database.windows.net&quot;"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;UDMH_STG&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;sb-dev-dw&quot;"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tSQLDWHConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;sb-dev-sql.database.windows.net&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;UDMH_STG&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;sb-dev-dw&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="USER" show="false" value="&quot;sb-admin&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="p2FjNM2tw0qCCa+Ko99o3A=="/>
-    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;sb-admin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="p2FjNM2tw0qCCa+Ko99o3A=="/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;MEDICATION_ADMINISTRATION_FACT&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CLOSED_LIST" name="AZURE_STORAGE" value="BLOB"/>
@@ -1565,15 +1565,15 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHCommit_2" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHCommit_2" target="tSQLDWHCommit_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk35"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHRow_2" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHRow_2" target="tSQLDWHInput_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk36"/>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHRow_2" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHRow_2" target="tAzureStoragePut_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk37"/>
   </connection>
   <connection connectorName="FLOW" label="FromMT" lineStyle="0" metaname="tSQLDWHInput_2" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_2" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="FromMT"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHInput_2" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_2" target="tAzureStoragePut_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk37"/>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHInput_2" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHInput_2" target="tSQLDWHRow_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk36"/>
   </connection>
   <connection connectorName="FLOW" label="Out_to_MAM_Insert" lineStyle="0" metaname="Out_to_MAM_Insert" offsetLabelX="7" offsetLabelY="-23" source="tMap_2" target="tFileOutputDelimited_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -1656,7 +1656,7 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHRow_1" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHRow_1" target="tSQLDWHRow_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk44"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHRow_4" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHRow_4" target="tSQLDWHRow_2">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHRow_4" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHRow_4" target="tSQLDWHInput_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk47"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHConnection_4" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHConnection_4" target="tSQLDWHConnection_3">
@@ -1791,13 +1791,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cd4c293f-d948-40f9-b461-ec947b9a39f9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wFOpl6+mh1RandLL2IajJA9NkeWod7EW38/gRJQGd9US/1ijvsSNZjmpRQ97+/iZBCm3y+MsRKl1
-aiMX+gq+Rw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a7c78679-4eb1-419c-9710-50387bf93e82"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Hf8hbsfgASUul5ju0oc5pFxHlai4QM1TNhWpPTNUrMaAsU3QSjp6EsOfqWczfLb6YdPJS4iTlmCV
-j+TqvT26OA==</DigestValue></Reference></SignedInfo><SignatureValue>HLjj0isObYJsIq9aCza4RQUAz/Zi2XB+8SfjprafpU+TR5eDDowzu+jXgaUXaZVNXZrJMuCTGuvd
-9hufaDcYT2Ba06vhpk16ClmlqBOt/iHWqIlImkS9yUixH19JsU8FTjMnZ1F3w4hUfTl1EGXyM6lv
-Na4xIfFZNabepso2wtnEz+kHygQ6YKD+JfZSqA1cDfngtpxuaARUn2krwNAZcfyIVOWaXEPUodng
-4TH+oAl3sCOhv/C/AwKJZAITOooenvaK2VTWnKTMQ5roMkyGlZyIMgUfTn9ZHaqdxs68FADvTpde
-w9VFj2eIgZuzuklo/EjrY+XLOWACeJf4zYYMMA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7fe23e1b-f19d-4c08-afb6-40972d37c4f8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FRfkxFAq1iLUconLh1OzUu8/8koPS/UhggIxU9dDXh+k3ejKH4bk2hHDjq+LmlAAAP/wTNadbfLW
+hPFOEQrBrA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0acff0d1-2679-451f-a6a2-2193494ddb3c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+kYjK1HLSMip1j59zmw4FNRNCi8UZq4S7Fi588KEd0pcNY3ZtVioIRqWEyD9hdcpy4JcBMtYZnRF
+aWU4+YWfRw==</DigestValue></Reference></SignedInfo><SignatureValue>Aq8h0p4oPBLqc+3C+/QJJXmv2nYXfD4WDqwMLGw9vIsyZX/UG8EtQaUXuC8F4FHVeluLOieV1S2S
+UG7rzglPvzf2Whf8WfzTpy0VC5SGSdtd1XB2K0suxX6+Rvxb0x3/9AlLAjo+/xST58v4sxNgf2An
+GRWSWiD37DrKW3ly8VesofkyJCEVxp33K8xRW64nGSY4oUkMpVLuizPclEHq9u8q4a1Zaj4Gv/B2
+iozxuy1YZEQ4vF55+YtjhrXMiwNtTNqlWXTReBKi/9awSw5tzl1JVabwsl7Jty+nDwTKdVcqdpRz
+7xcFtJEvniba+fU8dD+3F7U1472QF2pkemcAag==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1819,4 +1819,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a7c78679-4eb1-419c-9710-50387bf93e82" Target="#_cd4c293f-d948-40f9-b461-ec947b9a39f9"><Timestamp>2020-01-13 23:41:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0acff0d1-2679-451f-a6a2-2193494ddb3c" Target="#_7fe23e1b-f19d-4c08-afb6-40972d37c4f8"><Timestamp>2020-01-13 23:53:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
