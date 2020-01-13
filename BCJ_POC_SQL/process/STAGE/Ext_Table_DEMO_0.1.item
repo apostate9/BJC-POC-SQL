@@ -304,7 +304,7 @@
         <mapperTableEntries expression="ext_IN.INS_TS " name="INSERT_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="TalendDate.getCurrentDate() " name="UPDATE_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ext_IN.CSM " name="CHKSUM" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;I&quot;" name="CHG_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;U&quot;" name="CHG_IND" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ext_IN" sizeState="INTERMEDIATE">
         <mapperTableEntries name="ORDER_ID" nullable="true" type="id_String"/>
@@ -600,7 +600,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into [DW_STAGE].[MANAGED_TABLE] SELECT * from [DW_STAGE].[MANAGED_TABLE_STAGE] WHERE CHG_IND = 'A';&#13;&#10;insert into [[DW_STAGE].[MANAGED_TABLE] SELECT * FROM [DW_STAGE].[MANAGED_TABLE_STAGE] WHERE CHG_IND = 'U';&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into [DW_STAGE].[MANAGED_TABLE] SELECT * from [DW_STAGE].[MANAGED_TABLE_STAGE] WHERE CHG_IND = 'A';&#13;&#10;insert into [DW_STAGE].[MANAGED_TABLE] SELECT * FROM [DW_STAGE].[MANAGED_TABLE_STAGE] WHERE CHG_IND = 'U';&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
