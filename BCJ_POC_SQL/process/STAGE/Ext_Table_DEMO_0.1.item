@@ -294,7 +294,7 @@
         <mapperTableEntries expression="&quot;A&quot;" name="CHG_IND" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID != null &amp;&amp; !ext_IN.CHKSUM.equals(ext_IN.CSM))" name="Out_To_Closeout" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID != null &amp;&amp; !ext_IN.CHKSUM.equals(ext_IN.CSM)" name="Out_To_Closeout" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ext_IN.ORD_ID " name="ORDER_ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.ORD_TS " name="ORDER_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ext_IN.DRG_NM " name="DRUG_NAME" nullable="true" type="id_String"/>
@@ -941,9 +941,9 @@
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" columnNameFilter="From_MAM.POBK == null" expressionFilter="From_MAM.POBK == null || (From_MAM.POBK != null &amp;&amp; From_MAM.CHKSUM != From_MAM.CHKSM)" name="Out_To_Insert_FACT" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" columnNameFilter="From_MAM.POBK == null" expressionFilter="From_MAM.POBK == null || (From_MAM.POBK != null &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM))" name="Out_To_Insert_FACT" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="" name="MEDICATION_ADMINISTRATION_DK" type="id_Long"/>
         <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_BK " name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_ID " name="PHARMACY_ORDER_ID" nullable="true" type="id_String"/>
@@ -959,7 +959,7 @@
         <mapperTableEntries expression="&quot;A&quot;" name="CHG_IND" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="From_MAM.POBK != null &amp;&amp; From_MAM.CHKSUM != From_MAM.CHKSM" name="Out_To_Update_FACT" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="From_MAM.POBK != null &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM)" name="Out_To_Update_FACT" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="From_MAM.MEDICATION_ADMINISTRATION_DK " name="MEDICATION_ADMINISTRATION_DK" type="id_Long"/>
         <mapperTableEntries expression="From_MAM.POBK " name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.POID " name="PHARMACY_ORDER_ID" nullable="true" type="id_String"/>
@@ -1788,13 +1788,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b3196a2e-2960-49dd-b3f1-2467053d674b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>c3icWXMeYsTxHQePwxx92+lJCZyKYMSM2xkpnM+/kJSVj5HIcXAkySiZpkJ4+t7np8zKJF7Eur+q
-3XTG5YPpxw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_19becb91-c91e-4eea-891b-358e1ccaa4f9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VR5gNRNW+7KxwQ8xVR+QIml3Z8Fqqsi28yzISJyD8+7OgHhwpCtneX8hVgK4HEQ7ORnfhNLvW3iL
-QHeApx0/TQ==</DigestValue></Reference></SignedInfo><SignatureValue>O95jrx65Af0YMcyQrYF91An30IFbY27tPqOqw4m5y7Vgnos5eP6qNTstahGItz67JKn2CCgEz+P5
-iZMqlEpCWyK5SbuvWNRqSsgd2ojQmbHv1K+YZyviQp5EcHSsT5EhJzZG72h4kkvQdIn0fUmIlBXI
-9InyskrWC94K+P4dp1FijTKMDOZzQW/9Qg9bhUagGynRFhsYshhiyxigEqkKVH7W0HlabhERuT+7
-Mbpaxepp+xabCsofo+mPwsNhsubDgUBJr3wInDshKZYWSMx19ETT4sEp3/3WiQQ8oZ7P+4CbQR3q
-m4IphFvceh271D3+4PY3+BomIq5azARfVX1vhQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0a7dfd99-0102-4392-9054-692a0ba81202"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sZYuHI60izgxL454fJXArbR6J3VFRBFUgsIgL47AsLJR6LclkzH2NagU841oKYROBHtwV7kq3CVd
+t8xmAZa1Iw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ebdc4782-ae15-4cee-996f-ba18c24fad65"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>a+VdYSGr6KPWzxfY4bP55AH8Y1JV8v/Xh8cdLDKJAzfZoLFx4Kr9TcUPCuVeq73eKEw3f7dsYzT0
+bZ/fvBv7Lg==</DigestValue></Reference></SignedInfo><SignatureValue>HnHQASdFaxZtqQjeEFIVz403a/eQdiLbb60x1NBQITtOvfqpOoh3MWXpHKQ/Ch5AdXttcbCSz5t1
+q9RquNFL+UI5UEmSPGbhq08aEoI61VH7am2WUjn6U5Ss13qc/3OBkMYdAlb2mmM3ctcAxQU4sxFC
+sDI1MxDqYHWlOmRTqAb+oAS+9yyA2yGI7pyWciF/XGwbEgwrh6wV5KKVzHzmSddotuGvoF+5eMxU
+Z+wkmSobOVQVohen6gAMxEAOJnFE7G6akTLzqR1KpqA/nUHOptttFQf1JrFVPax0rtenORkRVko5
+wOk0KScI3uNBoB0YZLHZ1e7m30wrPnMuIj6fmw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1816,4 +1816,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_19becb91-c91e-4eea-891b-358e1ccaa4f9" Target="#_b3196a2e-2960-49dd-b3f1-2467053d674b"><Timestamp>2020-01-13 23:26:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ebdc4782-ae15-4cee-996f-ba18c24fad65" Target="#_0a7dfd99-0102-4392-9054-692a0ba81202"><Timestamp>2020-01-13 23:27:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
