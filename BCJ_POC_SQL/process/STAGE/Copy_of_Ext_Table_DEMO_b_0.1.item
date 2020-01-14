@@ -218,75 +218,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSQLDWHCommit_2"/>
   </node>
-  <node componentName="tSQLDWHBulkExec" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="224" posY="480">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHBulkExec_3"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tSQLDWHConnection_2"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;sb-dev-sql.database.windows.net&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;UDMH_STG&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;sb-dev-dw&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;sb-admin&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="p2FjNM2tw0qCCa+Ko99o3A=="/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;STG_MEDICATION_ADMINISTRATION_FACT&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
-    <elementParameter field="CLOSED_LIST" name="AZURE_STORAGE" value="BLOB"/>
-    <elementParameter field="TEXT" name="ACCOUNT_NAME" value="&quot;sbdev01&quot;"/>
-    <elementParameter field="PASSWORD" name="SECRET_KEY" value="v5A4RfmAyQPu47Qoq7tagCSUONp7vDTGSOA5rpBHXIuvVym/QtzkcPuzGkIkn/jAQ5ObsqhHU2EILvmBsBLFr4uVzEec6DyUeXzGqtjH2iBmoqo2PUWqo2+1IoC8Uw5S"/>
-    <elementParameter field="TEXT" name="CONTAINER" value="&quot;stage&quot;"/>
-    <elementParameter field="PASSWORD" name="PRINCIPAL_KEY" show="false" value="0RMsyjmybrE="/>
-    <elementParameter field="TEXT" name="CLIENT_ID" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="AZURE_LOCATION" value="&quot;BJC_DEMO/MED_ADM_FACT&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="CLOSED_LIST" name="IMPORT_TYPE" value="DELIMITED_TEXT"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="USE_STRING_DELIMITER" value="false"/>
-    <elementParameter field="TEXT" name="STRINGDELIMITER" show="false" value="&quot;\&quot;&quot;"/>
-    <elementParameter field="CHECK" name="DATE_FORMAT" value="true"/>
-    <elementParameter field="TEXT" name="DATE_PATTERN" value="&quot;yyyy-MM-dd HH:mm:ss&quot;"/>
-    <elementParameter field="CHECK" name="USE_TYPE_DEFAULT" value="false"/>
-    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="COMPRESSION_TEXT" show="false" value="org.apache.hadoop.io.compress.DefaultCodec"/>
-    <elementParameter field="CLOSED_LIST" name="COMPRESSION_RC" show="false" value="org.apache.hadoop.io.compress.DefaultCodec"/>
-    <elementParameter field="CLOSED_LIST" name="SERDE_METHOD" show="false" value="org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe"/>
-    <elementParameter field="CLOSED_LIST" name="COMPRESSION_ORC" show="false" value="org.apache.hadoop.io.compress.DefaultCodec"/>
-    <elementParameter field="CLOSED_LIST" name="COMPRESSION_PARQUET" show="false" value="org.apache.hadoop.io.compress.GzipCodec"/>
-    <elementParameter field="CHECK" name="EXT_TABLE_OPTIONS" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="REJECT_TYPE" show="false" value="Value"/>
-    <elementParameter field="TEXT" name="REJECT_VALUE" show="false" value="0"/>
-    <elementParameter field="TEXT" name="REJECT_SAMPLE_VALUE" show="false" value="0"/>
-    <elementParameter field="CLOSED_LIST" name="DISTRIBUTION" value="ROUND_ROBIN"/>
-    <elementParameter field="TEXT" name="DISTRIBUTION_COLUMN_NAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_OPTION" value="CLUSTERED_COLUMNSTORE_INDEX"/>
-    <elementParameter field="TEXT" name="INDEX_COLUMNS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="PARTITION" value="false"/>
-    <elementParameter field="TEXT" name="PARTITION_COLUMN_NAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="PARTITION_COLUMN_NAME_RANGE" show="false" value="LEFT"/>
-    <elementParameter field="TEXT" name="PARTITION_VALUES" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="LABEL" value="MED_ADMIN_FACT_STAGE"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="MANAGED_TABLE_CHKSUM" name="tSQLDWHBulkExec_3">
-      <column comment="" defaultValue="" key="false" length="19" name="MEDICATION_ADMINISTRATION_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="PHARMACY_ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="ADMIN_STATUS_CD_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ADMIN_STATUS_CD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="TENANT_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CRN_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="CHG_IND" nullable="true" originalLength="1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="480">
+  <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHRow_3"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_5"/>
@@ -324,7 +256,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="480">
+  <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHRow_6"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_4"/>
@@ -428,7 +360,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSQLDWHCommit_4"/>
   </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHConnection_1" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHConnection_1" target="tSQLDWHBulkExec_3">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHConnection_1" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHConnection_1" target="tSQLDWHRow_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk22"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHConnection_2" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHConnection_2" target="tSQLDWHConnection_1">
@@ -448,9 +380,6 @@
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHCommit_2" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHCommit_2" target="tSQLDWHCommit_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk35"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHBulkExec_3" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHBulkExec_3" target="tSQLDWHRow_3">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk42"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHRow_3" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHRow_3" target="tSQLDWHRow_6">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk43"/>
@@ -498,11 +427,6 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHBulkExec_3"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHRow_3"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
@@ -532,13 +456,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b6865d7e-fbab-4761-8d07-d9be6e1cf438"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QI+BVd14NnEIb/ugDLhFwrK0+tV/MyA055w2zRZrhamn4cJOBkF7dePgdeyBiyfTe16Mgk5tI/1q
-+07JYu0GZw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0b9b38be-5a04-4f7c-aed5-e3ed78c83d85"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>e19lF49dKjIrH14kSH9rqHjmJlpSX6x2UoUxsmT0uDhe+GWYnB3Qhr7V8h4lexxK1dDUh46zXnsm
-9RbmsPGzrA==</DigestValue></Reference></SignedInfo><SignatureValue>Wz4pDVQfo8AnS4z1gjJzow3uUI5ND3S9s+4KfDLlj6wi7DLRGtxHgwBGsTjQml5ovatc59G5hzwB
-Ndp/dX4WF88OxCzZClqBfamLHOlY8e8pZX0SE6RnnnwinwpG62FvHLjiwVwni6q3cB3QBiLO/hka
-YQ/lHl+Mu4GJpWULpg86URWOeFIN8YyL7IzqPWbdSOwhiHGqCnQ9GOcRhM2Kx3oLRpn2NIsi046L
-333B+sl6BwKvQ1PyhHnYVKxFt7B45ZDeu1aed1FbmnwBRmXFgcHdfe3e4ow0vaBJrpfJMwTKogSV
-B1iDIyOYRIAWhxZxovEUDYRI4SGMRh5vN5oNwg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f6cb975d-9da5-401d-99c2-9a7625941fa9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pUmRNkwPVKQR6wJeJyXsxSuSHEgDlK7LDwitecy8nVHtJQ/KShdpy74RaKaymeirai/PBcVgFjPJ
+CdzNbfhmog==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0e11a094-e704-4744-b990-b84237512028"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TroF8YZlHZbV/7b7riV2gIEyeBNnpGkgEmXDx+yc+ucKtABO0QKLmKFYAo5qu0mquM8UmoPS3SBD
+P7HLiE0kmw==</DigestValue></Reference></SignedInfo><SignatureValue>FqzpHzGol1mlXDVE50sHnTXnXSHI4G6ftNIeKQ/IgFplu5d3yjkP8NLtXZe0vF/5dQ96Q89H1xyB
+3uJXTtB8lvWzo1Eurerd/iyfHmfV/DTxoUuJ9V5klKyWI4ZzKLkII4sg0YpReNef5MLz73aJ9Zgk
+tyUHHmdUYwXp54/ilDAqJGBkZDhWUXK4AUONnMMeYJMQBpXQIas/8GvqvD63eK7x6vTTeGopbFYN
+6b5hn3cmE+bALZ/tE27gERkHwN38LhQa+sfjgutaDtUP3qxYbHneQ+eJJAygW/20NqLenNvUaEA/
+DdjX4ZqJ+f0N9gIMBShBzBmXxLMY+8MpPZgKAg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -560,4 +484,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0b9b38be-5a04-4f7c-aed5-e3ed78c83d85" Target="#_b6865d7e-fbab-4761-8d07-d9be6e1cf438"><Timestamp>2020-01-14 00:42:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0e11a094-e704-4744-b990-b84237512028" Target="#_f6cb975d-9da5-401d-99c2-9a7625941fa9"><Timestamp>2020-01-14 00:49:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
