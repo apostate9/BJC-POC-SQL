@@ -941,7 +941,7 @@
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateExpressionFilter="true" columnNameFilter="From_MAM.POBK == null" expressionFilter="From_MAM.POBK == null || (From_MAM.POBK != null &amp;&amp; From_MAM.CRN_IND == 1  &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM))" name="Out_To_Insert_FACT" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="From_MAM.MEDICATION_ADMINISTRATION_DK " name="MEDICATION_ADMINISTRATION_DK" nullable="true" type="id_Long"/>
@@ -1278,7 +1278,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="384">
+  <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHRow_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_2"/>
@@ -1316,7 +1316,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="384">
+  <node componentName="tSQLDWHRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSQLDWHRow_4"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSQLDWHConnection_2"/>
@@ -1333,7 +1333,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE [DW_STAGE].[MANAGED_TABLE] set &#13;&#10;     [DW_STAGE].[MANAGED_TABLE].ORDER_ID = STG.ORDER_ID,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].ORDER_TS = STG.ORDER_TS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].DRUG_NAME = STG.DRUG_NAME,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].ADMIN_TS = STG.ADMIN_TS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].STATUS = STG.STATUS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].CURATED_STATUS = STG.CURATED_STATUS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].INSERT_TS = STG.INSERT_TS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].UPDATE_TS = STG.UPDATE_TS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].CHKSUM = STG.CHKSUM&#13;&#10;FROM [DW_STAGE].[MANAGED_TABLE_STAGE] STG where [DW_STAGE].[MANAGED_TABLE].ORDER_ID = STG.ORDER_ID and STG.ORDER_ID = 'U'&quot;&#13;&#10;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE [DW_STAGE].[MANAGED_TABLE] set &#13;&#10;     [DW_STAGE].[MANAGED_TABLE].UPDATE_TS = STG.UPDATE_TS,&#13;&#10;FROM [DW_STAGE].[MANAGED_TABLE_STAGE] STG &#13;&#10;where [DW_STAGE].[MANAGED_TABLE].ORDER_ID = STG.ORDER_ID&#13;&#10;and [DW_STAGE].[MANAGED_TABLE].UPDATE_TS is null&#13;&#10;and STG.CHG_IND = 'U'&quot;&#13;&#10;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1373,7 +1373,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;Update [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT] set &#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].PHARMACY_ORDER_BK = STG.PHARMACY_ORDER_BK,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].PHARMACY_ORDER_ID = STG.PHARMACY_ORDER_ID,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].MEDICATION_TXT = STG.MEDICATION_TXT,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].ORDER_TS = STG.ORDER_TS,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].ADMIN_TS = STG.ADMIN_TS,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].ADMIN_STATUS_CD_DK = STG.ADMIN_STATUS_CD_DK,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].ADMIN_STATUS_CD = STG.ADMIN_STATUS_CD,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].VALID_FROM_TS = STG.VALID_FROM_TS,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].VALID_TO_TS = STG.VALID_TO_TS,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].TENANT_DK = STG.TENANT_DK,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].CRN_IND = STG.CRN_IND,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].CHKSUM = STG.CHKSUM&#13;&#10;from [UDMH_STG].[STG_MEDICATION_ADMINISTRATION_FACT] STG where &#13;&#10;[UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].MEDICATION_ADMINISTRATION_DK = STG.MEDICATION_ADMINISTRATION_DK&#13;&#10;AND STG.CHG_IND = 'U'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;Update [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT] set &#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].VALID_TO_TS = STG.VALID_TO_TS,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].CRN_IND = STG.CRN_IND&#13;&#10;from [UDMH_STG].[STG_MEDICATION_ADMINISTRATION_FACT] STG where &#13;&#10;[UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].MEDICATION_ADMINISTRATION_DK = STG.MEDICATION_ADMINISTRATION_DK&#13;&#10;AND STG.CHG_IND = 'U'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1556,8 +1556,8 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tAzureStorageConnection_1" offsetLabelX="0" offsetLabelY="0" source="tAzureStorageConnection_1" target="tSQLDWHConnection_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk32"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHBulkExec_1" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHBulkExec_1" target="tSQLDWHRow_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk33"/>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHBulkExec_1" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHBulkExec_1" target="tSQLDWHRow_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk22"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tSQLDWHCommit_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
@@ -1656,11 +1656,8 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHRow_3" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHRow_3" target="tSQLDWHRow_6">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk43"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHRow_1" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHRow_1" target="tSQLDWHRow_4">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk44"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHRow_4" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHRow_4" target="tSQLDWHInput_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk47"/>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHRow_4" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHRow_4" target="tSQLDWHRow_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk23"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSQLDWHConnection_4" offsetLabelX="0" offsetLabelY="0" source="tSQLDWHConnection_4" target="tSQLDWHConnection_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk45"/>
@@ -1803,13 +1800,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_218722d3-17b5-4df1-9184-3840fdb7e551"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BQf5kgNN554juFIT6DLXVnxqHyRP9pXz7LDs3FbhD89Esux9fv0rVpqZA/4Sow9khsMXCm7hUFCc
-WmEq90f5LQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_29037d05-ebf6-4fc7-8a24-24a40b5631bb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>c/utjll7pVGlt0IKG8geXtDpt6Tc2x6AkvMnuqTveOEt+o6ynmuayl4ECBt62BXcM5XSEiKZubYP
-LybBdk6bbQ==</DigestValue></Reference></SignedInfo><SignatureValue>cLBHQNN3toQ9PquBWZPiGhExTRPy4WI0cYhRJtuLDfz7ymiSg47sxMPPvtgZAMojvRYtgDoJ0m4H
-uusc/DGDEebllXfH57J0b+idySECjFx+B2V3MHhBM58H7HnikKbTfh9VNCOSNcDiA3J6t6LjGuHW
-uuBMrKNrzr+qt+Z3IJbvds68r63nWD/CwKzwyd7HDoSMK0fum7M0KGmKxNjzo6uuriE8OXG/ZRdW
-QMJNLiNVM+GOi3vIn7567DXo/RHWTBXnqbQGzNQIDb8c3/HSh8bVXtnoQHfNDBw5xh1xBt3MTERY
-QS1ulfitQ+1zd0GV/Rcj1ky+IzhbZqqjI7HS7Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d6e60401-6ca3-43ca-a265-b8e61c8c1c29"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>A98YhLngxoOb3+wPSf6ZTthGVVmM3l2WSQX7k2oy4vBl5NqBime8xYWyB9nDMR+8iiN7zMj0++P9
+tMbsApLn5w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_eb55c2ca-2359-4411-bf8c-098578a4af48"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vX8n98wjIVvcuXLWh8Gn3outbu8Gz6G56f1IJ94xqAtH3gquqx/Ks6CjMd5UKUreh68P/vbFXuPF
+pSxoDfvuLg==</DigestValue></Reference></SignedInfo><SignatureValue>neENSPM4+T4N5GsdO1kVVNfwRQS8NiQtbd1htrYHjg/DA8CRBUV+4iL27FPlNh7Aqpo8P2/fFNGI
+v0IWZXzpHLlXC3nmi09EW9Hpv34cmLy9c6YTfVxAGmTc+Wxl8EP7zmmCVfE+NQ++NLamU+gg4K5Q
+Keu0oJOClORO0T9C4mS7tmgCqEWe4p4fcQinUzPi9yKwMttY/6txgmUseyZpLahfFb/tKyzrQrkM
+QU9UfdxffCJuw6Ln+n/kLNu1n4HDHSgiJKvkdT++0qUxxrnZUmtltGAg0tm4ATENPUMsNlVxemn/
+aK0iiHSQmClJWnv+lBfC1y+x+IJcodBE9+MjaA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1831,4 +1828,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_29037d05-ebf6-4fc7-8a24-24a40b5631bb" Target="#_218722d3-17b5-4df1-9184-3840fdb7e551"><Timestamp>2020-01-14 18:46:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_eb55c2ca-2359-4411-bf8c-098578a4af48" Target="#_d6e60401-6ca3-43ca-a265-b8e61c8c1c29"><Timestamp>2020-01-14 19:06:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
