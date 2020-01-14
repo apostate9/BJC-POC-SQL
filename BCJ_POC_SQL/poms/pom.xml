@@ -27,6 +27,7 @@
     <module>jobs/process/RHOLMAN/ext_table_ingest_daily_0.1</module>
     <module>jobs/process/RHOLMAN/ext_table_ingest_initial_0.1</module>
     <module>jobs/process/RHOLMAN/load_fact_daily_0.1</module>
+    <module>jobs/process/STAGE/ext_table_demo_0.2</module>
   </modules>
   <properties>
     <signer.version>7.2.1</signer.version>
