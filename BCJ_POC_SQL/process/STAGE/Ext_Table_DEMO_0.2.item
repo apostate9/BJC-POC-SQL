@@ -155,7 +155,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT FL.ORDER_ID,&#13;&#10;&#9;&#9;FL.ORDER_TS,&#13;&#10;&#9;&#9;FL.DRUG_NAME,&#13;&#10;&#9;&#9;FL.ADMIN_TS,&#13;&#10;&#9;&#9;FL.STATUS,&#13;&#10;&#9;&#9;FL.CURATED_STATUS,&#13;&#10;&#9;&#9;FL.INSERT_TS,&#13;&#10;&#9;&#9;FL.UPDATE_TS,&#13;&#10;        CONVERT(NVARCHAR(32),HASHBYTES('SHA2_256', coalesce(FL.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(FL.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(FL.ORDER_TS,'') + '|' +&#13;&#10;                              coalesce(FL.DRUG_NAME,'') + '|' +&#13;&#10;                              coalesce(FL.ADMIN_TS,'') + '|' +&#13;&#10;                              coalesce(FL.STATUS,'') + '|' +&#13;&#10;                              coalesce(FL.CURATED_STATUS,'') + '|' +&#13;&#10;                              coalesce(FL.INSERT_TS,'') + '|' +&#13;&#10;                              coalesce(FL.UPDATE_ts,'')), 2) as CHKSUM,&#13;&#10;&#9;&#9;MT.ORDER_ID ORD_ID,&#13;&#10;&#9;&#9;MT.ORDER_TS ORD_TS,&#13;&#10;&#9;&#9;MT.DRUG_NAME DRG_NM,&#13;&#10;&#9;&#9;MT.ADMIN_TS ADM_TS,&#13;&#10;&#9;&#9;MT.STATUS STS,&#13;&#10;&#9;&#9;MT.CURATED_STATUS CTD_STS,&#13;&#10;&#9;&#9;MT.INSERT_TS INS_TS,&#13;&#10;&#9;&#9;MT.UPDATE_TS UPD_TS,&#13;&#10;&#9;&#9;MT.CHKSUM CSM&#13;&#10;FROM&#9;ext.full_Load_sample FL&#13;&#10;LEFT JOIN DW_STAGE.MANAGED_TABLE MT on FL.ORDER_ID = MT.ORDER_ID&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT FL.ORDER_ID,&#13;&#10;&#9;&#9;FL.ORDER_TS,&#13;&#10;&#9;&#9;FL.DRUG_NAME,&#13;&#10;&#9;&#9;FL.ADMIN_TS,&#13;&#10;&#9;&#9;FL.STATUS,&#13;&#10;&#9;&#9;FL.CURATED_STATUS,&#13;&#10;&#9;&#9;FL.INSERT_TS,&#13;&#10;&#9;&#9;FL.UPDATE_TS,&#13;&#10;        CONVERT(NVARCHAR(32),HASHBYTES('SHA2_256', coalesce(FL.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(FL.ORDER_ID,'') + '|' +&#13;&#10;                              coalesce(FL.ORDER_TS,'') + '|' +&#13;&#10;                              coalesce(FL.DRUG_NAME,'') + '|' +&#13;&#10;                              coalesce(FL.ADMIN_TS,'') + '|' +&#13;&#10;                              coalesce(FL.STATUS,'') + '|' +&#13;&#10;                              coalesce(FL.CURATED_STATUS,'') + '|' +&#13;&#10;                              coalesce(FL.INSERT_TS,'') + '|' +&#13;&#10;                              coalesce(FL.UPDATE_ts,'')), 2) as CHKSUM,&#13;&#10;&#9;&#9;MT.ORDER_ID ORD_ID,&#13;&#10;&#9;&#9;MT.ORDER_TS ORD_TS,&#13;&#10;&#9;&#9;MT.DRUG_NAME DRG_NM,&#13;&#10;&#9;&#9;MT.ADMIN_TS ADM_TS,&#13;&#10;&#9;&#9;MT.STATUS STS,&#13;&#10;&#9;&#9;MT.CURATED_STATUS CTD_STS,&#13;&#10;&#9;&#9;MT.INSERT_TS INS_TS,&#13;&#10;&#9;&#9;MT.UPDATE_TS UPD_TS,&#13;&#10;&#9;&#9;MT.CHKSUM CSM&#13;&#10;FROM ext.full_load_incramental FL&#13;&#10;LEFT JOIN DW_STAGE.MANAGED_TABLE MT on FL.ORDER_ID = MT.ORDER_ID&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -280,9 +280,9 @@
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID == null || (ext_IN.ORD_ID != null &amp;&amp; !ext_IN.CHKSUM.equals(ext_IN.CSM))" name="Out_To_Input" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID == null || (ext_IN.ORD_ID != null &amp;&amp; ext_IN.UPDATE_TS == null &amp;&amp; !ext_IN.CHKSUM.equals(ext_IN.CSM))" name="Out_To_Input" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ext_IN.ORDER_ID " name="ORDER_ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.ORDER_TS == null ? null : TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,ext_IN.ORDER_TS) " name="ORDER_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ext_IN.DRUG_NAME " name="DRUG_NAME" nullable="true" type="id_String"/>
@@ -294,7 +294,7 @@
         <mapperTableEntries expression="&quot;A&quot;" name="CHG_IND" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID != null &amp;&amp; !ext_IN.CHKSUM.equals(ext_IN.CSM)" name="Out_To_Closeout" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID != null &amp;&amp; ext_IN.UPDATE_TS == null  &amp;&amp; !ext_IN.CHKSUM.equals(ext_IN.CSM)" name="Out_To_Closeout" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ext_IN.ORD_ID " name="ORDER_ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.ORD_TS " name="ORDER_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ext_IN.DRG_NM " name="DRUG_NAME" nullable="true" type="id_String"/>
@@ -941,9 +941,9 @@
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" columnNameFilter="From_MAM.POBK == null" expressionFilter="From_MAM.POBK == null || (From_MAM.POBK != null &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM))" name="Out_To_Insert_FACT" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" columnNameFilter="From_MAM.POBK == null" expressionFilter="From_MAM.POBK == null || (From_MAM.POBK != null &amp;&amp; From_MAM.CRN_IND == 1  &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM))" name="Out_To_Insert_FACT" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="From_MAM.MEDICATION_ADMINISTRATION_DK " name="MEDICATION_ADMINISTRATION_DK" nullable="true" type="id_Long"/>
         <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_BK " name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_ID " name="PHARMACY_ORDER_ID" nullable="true" type="id_String"/>
@@ -953,13 +953,13 @@
         <mapperTableEntries expression="From_MAM.ADMIN_STATUS_CD_DK " name="ADMIN_STATUS_CD_DK" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.ADMIN_STATUS_CD " name="ADMIN_STATUS_CD" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.VALID_FROM_TS " name="VALID_FROM_TS" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="From_MAM.VALID_TO_TS " name="VALID_TO_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="" name="VALID_TO_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="From_MAM.TENANT_DK " name="TENANT_DK" nullable="true" type="id_Long"/>
         <mapperTableEntries expression="1" name="CRN_IND" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="&quot;A&quot;" name="CHG_IND" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="From_MAM.POBK != null &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM)" name="Out_To_Update_FACT" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="From_MAM.POBK != null &amp;&amp; From_MAM.CRN_IND == 1 &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM)" name="Out_To_Update_FACT" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="From_MAM.MEDICATION_ADMINISTRATION_DK " name="MEDICATION_ADMINISTRATION_DK" nullable="true" type="id_Long"/>
         <mapperTableEntries expression="From_MAM.POBK " name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.POID " name="PHARMACY_ORDER_ID" nullable="true" type="id_String"/>
@@ -973,7 +973,7 @@
         <mapperTableEntries expression="From_MAM.TNT_DK " name="TENANT_DK" nullable="true" type="id_Long"/>
         <mapperTableEntries expression="0" name="CRN_IND" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="&quot;U&quot;" name="CHG_IND" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="From_MAM.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="From_MAM.CHKSM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="From_MAM" sizeState="INTERMEDIATE">
         <mapperTableEntries name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
@@ -1333,7 +1333,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into [DW_STAGE].[MANAGED_TABLE] &#13;&#10;SELECT &#13;&#10;    ORDER_ID,&#13;&#10;    ORDER_TS,&#13;&#10;    DRUG_NAME,&#13;&#10;    ADMIN_TS,&#13;&#10;    STATUS,&#13;&#10;    CURATED_STATUS,&#13;&#10;    INSERT_TS,&#13;&#10;    UPDATE_TS,&#13;&#10;    CHKSUM&#13;&#10; from [DW_STAGE].[MANAGED_TABLE_STAGE] WHERE CHG_IND = 'U';&quot;&#13;&#10;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE [DW_STAGE].[MANAGED_TABLE] set &#13;&#10;     [DW_STAGE].[MANAGED_TABLE].ORDER_ID = STG.ORDER_ID,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].ORDER_TS = STG.ORDER_TS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].DRUG_NAME = STG.DRUG_NAME,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].ADMIN_TS = STG.ADMIN_TS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].STATUS = STG.STATUS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].CURATED_STATUS = STG.CURATED_STATUS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].INSERT_TS = STG.INSERT_TS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].UPDATE_TS = STG.UPDATE_TS,&#13;&#10;     [DW_STAGE].[MANAGED_TABLE].CHKSUM = STG.CHKSUM&#13;&#10;FROM [DW_STAGE].[MANAGED_TABLE_STAGE] STG where [DW_STAGE].[MANAGED_TABLE].ORDER_ID = STG.ORDER_ID and STG.ORDER_ID = 'U'&quot;&#13;&#10;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1373,7 +1373,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT]&#13;&#10;SELECT &#13;&#10;    PHARMACY_ORDER_BK,&#13;&#10;    PHARMACY_ORDER_ID,&#13;&#10;    MEDICATION_TXT,&#13;&#10;    ORDER_TS,&#13;&#10;    ADMIN_TS,&#13;&#10;    ADMIN_STATUS_CD_DK,&#13;&#10;    ADMIN_STATUS_CD,&#13;&#10;    VALID_FROM_TS,&#13;&#10;    VALID_TO_TS,&#13;&#10;    TENANT_DK,&#13;&#10;    CRN_IND,&#13;&#10;    CHKSUM&#13;&#10; from [UDMH_STG].[STG_MEDICATION_ADMINISTRATION_FACT] WHERE CHG_IND = 'U';&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;Update [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT] set &#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].PHARMACY_ORDER_BK = STG.PHARMACY_ORDER_BK,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].PHARMACY_ORDER_ID = STG.PHARMACY_ORDER_ID,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].MEDICATION_TXT = STG.MEDICATION_TXT,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].ORDER_TS = STG.ORDER_TS,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].ADMIN_TS = STG.ADMIN_TS,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].ADMIN_STATUS_CD_DK = STG.ADMIN_STATUS_CD_DK,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].ADMIN_STATUS_CD = STG.ADMIN_STATUS_CD,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].VALID_FROM_TS = STG.VALID_FROM_TS,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].VALID_TO_TS = STG.VALID_TO_TS,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].TENANT_DK = STG.TENANT_DK,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].CRN_IND = STG.CRN_IND,&#13;&#10;    [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].CHKSUM = STG.CHKSUM&#13;&#10;from [UDMH_STG].[STG_MEDICATION_ADMINISTRATION_FACT] STG where &#13;&#10;[UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT].MEDICATION_ADMINISTRATION_DK = STG.MEDICATION_ADMINISTRATION_DK&#13;&#10;AND STG.CHG_IND = 'U'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1386,7 +1386,7 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
-    <elementParameter field="TEXT" name="LABEL" value="APD_FACT_FM_STG"/>
+    <elementParameter field="TEXT" name="LABEL" value="UPD_FACT_FM_STG"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSQLDWHRow_6"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1803,32 +1803,32 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_76427414-6fa7-4bc9-bf60-c957496adfb6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NbmA+WNyIeXCs2l7zKMbBt0VxMk1gCvduPANxVBlXnCJO8IHn9mPOavvo3nm8oQj9OQm7zMYIRsn&#13;
-jsq9zYYHYQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_786d0cad-8d87-473f-b2a5-12cb774b09f5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cqgP3D8x89Z0DOHp77RPu8BLQ62RSxtBO5Y7tnT6/51i8jYoIAxtJIoI8RoJtQRBwjUlpgqwjJH6&#13;
-YFA2EBaCbA==</DigestValue></Reference></SignedInfo><SignatureValue>ZTzPrEtCkmr9mkvhkR/epv2yXREuj9+NZgRCpf3uKJN0PTL9bVdsYiPM80HJh8d+5VOz+Y7cZ8R0&#13;
-VXgiDVq7ddb/FESAeb82CB4yHM/kaTQIlsMjMrYv9/CZfHWobVTEcpyxXC17qcpt+9wWlXEpoEtZ&#13;
-Fi2Kudnb805nIZVD90iGHqylaj7lcI5+zfs9PHjiEL+mdK2o5cEq5bvuHKZVVFGCYBeStP6AnGBj&#13;
-KuG6R2Ssd2oTRQTDD2i6uR4gsIM2v0FxLiiBVlrV4+Jts+OvJcAdtUHN939/G+VodY2J6taUcH3M&#13;
-TqN/GCjSoKXwHf7g+rQDVFDkBxS0JB2C9kzVDQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
-DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
-VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
-QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
-YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
-bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
-IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
-DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
-alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
-e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
-CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
-TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
-BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
-gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
-eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
-f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
-G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
-mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
-hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
-WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
-gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
-qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_786d0cad-8d87-473f-b2a5-12cb774b09f5" Target="#_76427414-6fa7-4bc9-bf60-c957496adfb6"><Timestamp>2020-01-14 17:38:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_218722d3-17b5-4df1-9184-3840fdb7e551"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BQf5kgNN554juFIT6DLXVnxqHyRP9pXz7LDs3FbhD89Esux9fv0rVpqZA/4Sow9khsMXCm7hUFCc
+WmEq90f5LQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_29037d05-ebf6-4fc7-8a24-24a40b5631bb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>c/utjll7pVGlt0IKG8geXtDpt6Tc2x6AkvMnuqTveOEt+o6ynmuayl4ECBt62BXcM5XSEiKZubYP
+LybBdk6bbQ==</DigestValue></Reference></SignedInfo><SignatureValue>cLBHQNN3toQ9PquBWZPiGhExTRPy4WI0cYhRJtuLDfz7ymiSg47sxMPPvtgZAMojvRYtgDoJ0m4H
+uusc/DGDEebllXfH57J0b+idySECjFx+B2V3MHhBM58H7HnikKbTfh9VNCOSNcDiA3J6t6LjGuHW
+uuBMrKNrzr+qt+Z3IJbvds68r63nWD/CwKzwyd7HDoSMK0fum7M0KGmKxNjzo6uuriE8OXG/ZRdW
+QMJNLiNVM+GOi3vIn7567DXo/RHWTBXnqbQGzNQIDb8c3/HSh8bVXtnoQHfNDBw5xh1xBt3MTERY
+QS1ulfitQ+1zd0GV/Rcj1ky+IzhbZqqjI7HS7Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_29037d05-ebf6-4fc7-8a24-24a40b5631bb" Target="#_218722d3-17b5-4df1-9184-3840fdb7e551"><Timestamp>2020-01-14 18:46:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
