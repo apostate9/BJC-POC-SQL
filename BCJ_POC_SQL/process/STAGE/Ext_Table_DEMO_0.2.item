@@ -280,9 +280,9 @@
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID == null || (ext_IN.ORD_ID != null &amp;&amp; !ext_IN.CHKSUM.equals(ext_IN.CSM))" name="Out_To_Input" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID == null || (ext_IN.ORD_ID != null &amp;&amp; ext_IN.UPDATE_TS == null &amp;&amp; !ext_IN.CHKSUM.equals(ext_IN.CSM))" name="Out_To_Input" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ext_IN.ORDER_ID " name="ORDER_ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.ORDER_TS == null ? null : TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,ext_IN.ORDER_TS) " name="ORDER_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ext_IN.DRUG_NAME " name="DRUG_NAME" nullable="true" type="id_String"/>
@@ -294,7 +294,7 @@
         <mapperTableEntries expression="&quot;A&quot;" name="CHG_IND" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID != null &amp;&amp; !ext_IN.CHKSUM.equals(ext_IN.CSM)" name="Out_To_Closeout" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="ext_IN.ORD_ID != null &amp;&amp; ext_IN.UPDATE_TS == null  &amp;&amp; !ext_IN.CHKSUM.equals(ext_IN.CSM)" name="Out_To_Closeout" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ext_IN.ORD_ID " name="ORDER_ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ext_IN.ORD_TS " name="ORDER_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ext_IN.DRG_NM " name="DRUG_NAME" nullable="true" type="id_String"/>
@@ -941,9 +941,9 @@
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" columnNameFilter="From_MAM.POBK == null" expressionFilter="From_MAM.POBK == null || (From_MAM.POBK != null &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM))" name="Out_To_Insert_FACT" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" columnNameFilter="From_MAM.POBK == null" expressionFilter="From_MAM.POBK == null || (From_MAM.POBK != null &amp;&amp; From_MAM.CRN_IND == 1  &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM))" name="Out_To_Insert_FACT" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="From_MAM.MEDICATION_ADMINISTRATION_DK " name="MEDICATION_ADMINISTRATION_DK" nullable="true" type="id_Long"/>
         <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_BK " name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_ID " name="PHARMACY_ORDER_ID" nullable="true" type="id_String"/>
@@ -953,13 +953,13 @@
         <mapperTableEntries expression="From_MAM.ADMIN_STATUS_CD_DK " name="ADMIN_STATUS_CD_DK" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.ADMIN_STATUS_CD " name="ADMIN_STATUS_CD" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.VALID_FROM_TS " name="VALID_FROM_TS" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="From_MAM.VALID_TO_TS " name="VALID_TO_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="" name="VALID_TO_TS" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="From_MAM.TENANT_DK " name="TENANT_DK" nullable="true" type="id_Long"/>
         <mapperTableEntries expression="1" name="CRN_IND" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="&quot;A&quot;" name="CHG_IND" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="From_MAM.POBK != null &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM)" name="Out_To_Update_FACT" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="From_MAM.POBK != null &amp;&amp; From_MAM.CRN_IND == 1 &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM)" name="Out_To_Update_FACT" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="From_MAM.MEDICATION_ADMINISTRATION_DK " name="MEDICATION_ADMINISTRATION_DK" nullable="true" type="id_Long"/>
         <mapperTableEntries expression="From_MAM.POBK " name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
         <mapperTableEntries expression="From_MAM.POID " name="PHARMACY_ORDER_ID" nullable="true" type="id_String"/>
@@ -973,7 +973,7 @@
         <mapperTableEntries expression="From_MAM.TNT_DK " name="TENANT_DK" nullable="true" type="id_Long"/>
         <mapperTableEntries expression="0" name="CRN_IND" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="&quot;U&quot;" name="CHG_IND" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="From_MAM.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="From_MAM.CHKSM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="From_MAM" sizeState="INTERMEDIATE">
         <mapperTableEntries name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
@@ -1803,13 +1803,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_66f88445-fa5b-4785-b187-952b70915ba4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/G/3zRyOaHEhzmbJm5q0xvMeMyBtxFkQR/w3/KYdrdVcrir6hiWBQTykA7DswZMTdzCJQIa29Ymx
-SjveGmFhvw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2743735d-810f-45be-a8c9-146ca751810a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Fm647rjUeaaVkl2qjt2G+15FdrUKQV1DHcKZQ8ih1kRGov4kfrObPupEjxmsNIrtA+tvTyoj3Gfm
-0+6EGOAi6Q==</DigestValue></Reference></SignedInfo><SignatureValue>bA6QrhQfeN4la1gKdkRMctlqqnlej5csLn4obHrrEMGyQzPKteAw8CugYx1PoMs0YCT0HxvHqeEt
-IC+pJ8rSYxAp+/eMTCPjhNg8CE3sRrZUbNdNhiX1WwvJfO3RfGyMphzJ01dlevrgtGwUoWYVd5ad
-YZbWqmUZxrguQRXfAPbif/aynPXYUV1K8h5DzxgA61MAQrsyGpuh6w+2cv4LATgK9ttyb3TGiGGP
-Faozn4nD6O/2Y4IGxHY51pNAYklzd8YyWX+IZ8Zhp0keX8a2y6bf6N5isETCrUopinyv7XthuoEB
-s5ajy+jqWC/nWKE1ttJI5qmeybkECoI+vzD5gQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c06173ad-4342-4d54-884a-fc73730309de"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>q1JcaFfUnm3tNbfdnK7/uzatbq4Z+0KNu7wp2RqrzZIsWcgD23b8F4gT3Ofwapy9iWUOqUWNdhDg
+JqynqC7Bhg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b7b12462-3ba6-477d-9eea-9a1a81f7ac4c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VZRhj+HjYTu+VCTPOw2LaZimD40C9INRcpfVed1jdeskS5a7e7TYZjxpc/43p07XkkJ4Kcs4wGi5
+AseY4xM8Xw==</DigestValue></Reference></SignedInfo><SignatureValue>P7iBv6cZwJx6jvDcz/+d+E4jXWGiVk79PWKckACmg/hQJCMRYx/EcHr88wDXF+IPa8iuSQChGKCd
+mYFQmKFE3Ffv/THW0mOdxp8Y0E77NzJXpfSJhZ9aW6qbnWwdEx0/GTfGnuajGz8pIgLesbIbEo+T
+EK1nADYC7e8k/TxfqhNigVuyj18D9/HI9u1YWhnHWJSAGI43FJ1Ry6qhwDPJCCpvBaGLwpvmiQjk
+QUf/j42nyzIuLw1MDr/IgEL3bBBQxK9ENecYPvM2VT8Rl1uLtiiAaikgBqCFzswDziyQ/l/epyOz
+wKttdkB4/H3FkGgPGaYqRW/XyEJWNH70HJnEww==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1831,4 +1831,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2743735d-810f-45be-a8c9-146ca751810a" Target="#_66f88445-fa5b-4785-b187-952b70915ba4"><Timestamp>2020-01-14 18:28:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b7b12462-3ba6-477d-9eea-9a1a81f7ac4c" Target="#_c06173ad-4342-4d54-884a-fc73730309de"><Timestamp>2020-01-14 18:42:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
