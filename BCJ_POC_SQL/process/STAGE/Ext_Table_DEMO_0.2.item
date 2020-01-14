@@ -1333,7 +1333,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE [DW_STAGE].[MANAGED_TABLE] set &#13;&#10;     [DW_STAGE].[MANAGED_TABLE].UPDATE_TS = STG.UPDATE_TS,&#13;&#10;FROM [DW_STAGE].[MANAGED_TABLE_STAGE] STG &#13;&#10;where [DW_STAGE].[MANAGED_TABLE].ORDER_ID = STG.ORDER_ID&#13;&#10;and [DW_STAGE].[MANAGED_TABLE].UPDATE_TS is null&#13;&#10;and STG.CHG_IND = 'U'&quot;&#13;&#10;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE [DW_STAGE].[MANAGED_TABLE] set &#13;&#10;     [DW_STAGE].[MANAGED_TABLE].UPDATE_TS = STG.UPDATE_TS&#13;&#10;FROM [DW_STAGE].[MANAGED_TABLE_STAGE] STG &#13;&#10;where [DW_STAGE].[MANAGED_TABLE].ORDER_ID = STG.ORDER_ID&#13;&#10;and [DW_STAGE].[MANAGED_TABLE].UPDATE_TS is null&#13;&#10;and STG.CHG_IND = 'U'&quot;&#13;&#10;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1800,13 +1800,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_88f5a67e-66ff-48bd-bfc6-f4fa1dbfa84c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DfekNJmdW0yNEWRzMd2/NkCZZSTWmV87Agq3w1pi3edW7Q99Q1Qv14wzIRx8yg4Af5AfuDoW0Wf3
-eB6oEhrvrw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fe87ee20-088f-4807-b0da-3933e6f16b91"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mHBzRhD8yy1Xg/AwcgO8jU2ZKPrB/P3+BPNi+fK+5hjPl0ym0QnTTMeYIuRW4hP8DPF95Ay22/mQ
-mKgLfVZKNg==</DigestValue></Reference></SignedInfo><SignatureValue>UqlXfqMlM0i3mVamZTAYsxyV7MOSoVd2sInuLSxtd7bpf5OskkfJzs8i+5gHAJ7ICnijePQFoFsK
-pDxhLnOrxDjdv1lgyVL674WusZhW6gi+oB4driVlttq3WaoYyTn3FF/e/4Z8Yg9/NQFd0sT3/d4X
-D4yw2aTVVOS2dZqdxhfUFcWFhbTmDsn/EVfGFP7ghORWQ/RdlR97uDsKKDiwEaYVLYuLD5Uj2CxM
-2+/w6i2PPCJNuJijY4c7kxxpFNqQIc7R+z3t7nWG65Qgs/OmaR1ZOzbsyI96fpvq1nQFH1aJo4Mv
-HrYhsYyW++4kxFONkIWhaacrugVG4up+pXQdtQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_48485271-7233-4447-b59c-bf99d86776b3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uEQ6z4MQwMhAjTWS2r3GkP2a4encw9Y/oTx5s/lVY8jKsG0TngT1Y76WW5z1QNiuSQpMbD3zeg3o
+2kCRXXqPUw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_435824bc-41da-4fe3-bc71-a68b3ee8957a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1WkX/933C+T3pkMHDV4Fhp/hzi6Aefsb+Vzq+5Y9EGa7zIu78cX6xPCO1OTviBMx3PDVA5PFSFl6
+hyEHzxEylg==</DigestValue></Reference></SignedInfo><SignatureValue>JrbRh1E00f04V9QgGYU399OALXlsJlblgarZ3ps3Klu2+yQrcPuxAkX61NOdkZbDq8a4PyfKLf2c
+rA0bl+XfS/cHCjIPvxFu91OvVWgsJWXDT14dF4UerlhnMjUa+tYLZynAGer6omCJ8LEYygBuEyzB
+iHRGv0ClaFYVDGMYSAEXPMcXcg2fswg4T4tf/4CRlAEToMPcKt2aAQeMV5Rjx5hotLxcw009RU8o
+lAF+oX0eGu1pM+EnLQH/0zDh2onxkpwbGo4PFTT0sJKDrDfJFN+3k5PwFjBlomytkiwSY0K/c5tZ
+oQQaokqZgp3PxDtovVYYQRYnsPCXATSJbcywKQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1828,4 +1828,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fe87ee20-088f-4807-b0da-3933e6f16b91" Target="#_88f5a67e-66ff-48bd-bfc6-f4fa1dbfa84c"><Timestamp>2020-01-14 19:16:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_435824bc-41da-4fe3-bc71-a68b3ee8957a" Target="#_48485271-7233-4447-b59c-bf99d86776b3"><Timestamp>2020-01-14 19:23:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
