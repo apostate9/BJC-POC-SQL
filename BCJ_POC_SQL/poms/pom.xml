@@ -24,6 +24,7 @@
     <module>jobs/process/STAGE/copy_of_ext_table_demo_0.1</module>
     <module>jobs/process/STAGE/copy_of_ext_table_demo_a_0.1</module>
     <module>jobs/process/STAGE/copy_of_ext_table_demo_b_0.1</module>
+    <module>jobs/process/STAGE/copy_of_ext_table_demo_c_0.1</module>
   </modules>
   <properties>
     <signer.version>7.2.1</signer.version>
