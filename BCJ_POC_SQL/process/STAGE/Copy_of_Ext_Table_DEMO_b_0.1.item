@@ -302,7 +302,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT]&#13;&#10;SELECT &#13;&#10;    PHARMACY_ORDER_BK,&#13;&#10;    PHARMACY_ORDER_ID,&#13;&#10;    MEDICATION_TXT,&#13;&#10;    ORDER_TS,&#13;&#10;    ADMIN_TS,&#13;&#10;    ADMIN_STATUS_CD_DK,&#13;&#10;    ADMIN_STATUS_CD,&#13;&#10;    VALID_FROM_TS,&#13;&#10;    VALID_TO_TS,&#13;&#10;    TENANT_DK,&#13;&#10;    CRN_IND,&#13;&#10;    CHKSUM&#13;&#10; from [UDMH_STG].[MEDICATION_ADMINISTRATION_FACT] WHERE CHG_IND = 'A';&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into [UDMH_DIM].[MEDICATION_ADMINISTRATION_FACT]&#13;&#10;SELECT &#13;&#10;    PHARMACY_ORDER_BK,&#13;&#10;    PHARMACY_ORDER_ID,&#13;&#10;    MEDICATION_TXT,&#13;&#10;    ORDER_TS,&#13;&#10;    ADMIN_TS,&#13;&#10;    ADMIN_STATUS_CD_DK,&#13;&#10;    ADMIN_STATUS_CD,&#13;&#10;    VALID_FROM_TS,&#13;&#10;    VALID_TO_TS,&#13;&#10;    TENANT_DK,&#13;&#10;    CRN_IND,&#13;&#10;    CHKSUM&#13;&#10; from [UDMH_STG].[STG_MEDICATION_ADMINISTRATION_FACT] WHERE CHG_IND = 'A';&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -340,7 +340,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10;&#9;MEDICATION_ADMINISTRATION_DK,&#13;&#10;    PHARAMCY_ORDER_BK,&#13;&#10;    PHARAMCY_ORDER_ID,&#13;&#10;    MEDICATION_TXT,&#13;&#10;    ORDER_TS,&#13;&#10;    ADMIN_TS,&#13;&#10;    ADMIN_STATUS_CD_DK,&#13;&#10;    ADMIN_STATUS_CD,&#13;&#10;    VALID_FROM_TS,&#13;&#10;    VALID_TO_TS,&#13;&#10;    TENANT_DK,&#13;&#10;    CRN_IND,&#13;&#10;    CHKSUM&#13;&#10; from [UDMH_STG].[MEDICATION_ADMINISTRATION_FACT] WHERE CHG_IND = 'U';&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10;&#9;MEDICATION_ADMINISTRATION_DK,&#13;&#10;    PHARAMCY_ORDER_BK,&#13;&#10;    PHARAMCY_ORDER_ID,&#13;&#10;    MEDICATION_TXT,&#13;&#10;    ORDER_TS,&#13;&#10;    ADMIN_TS,&#13;&#10;    ADMIN_STATUS_CD_DK,&#13;&#10;    ADMIN_STATUS_CD,&#13;&#10;    VALID_FROM_TS,&#13;&#10;    VALID_TO_TS,&#13;&#10;    TENANT_DK,&#13;&#10;    CRN_IND,&#13;&#10;    CHKSUM&#13;&#10; from [UDMH_STG].[STG_MEDICATION_ADMINISTRATION_FACT] WHERE CHG_IND = 'U';&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -531,13 +531,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_42534902-bd8f-4faf-b89d-4b0118f58e39"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wgzk1wx1h4eQBKbv8xf5XzTfuVkfMOkRn90I/LunnSGb45OGrghvRpwaL+BnGVyK1uFiOWF0eEIx
-oxIymNh/SQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6691a5ba-7d1d-4a61-9edd-8acc9e5cb274"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>spG1vZq7Hif6pWXBXjW7myLUup31mwzmaT3B7IJx6C3hGoTVd46S06fvYe37Bc+1xRXw3I4JbH2x
-3hDYlhS2MQ==</DigestValue></Reference></SignedInfo><SignatureValue>KK9ONOlF7YLBsuGOXNDkczjVAX/dp/IUhx5B8fwSanso0eqsBIeDhuyz/oI6DzGu8lj2pWzXcVXI
-PGCpijCTfpI1G3rcjV2OhLotS2QRW3qamC3fcOY8W3AW4EFrecDwoTmz54pr71BVpPpEyEG69S57
-LqD/o3fMtn2Yh8idKxTAJF0cX3jomrrOtCZGIUtqoR08bLUWgGae0J1W+kn1sjvcQ/ylP6Jdbyqh
-vU9rGqii+hhsY/eubjeVl/LejTpQe2eYW0kH0kGLOvedtEVmhg4spb4attqOi+OkNyzIqz2b1jvs
-l0fOLsM+Z3E+va7vzMmbxJoSoDV3c/H3wd3bPw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d158f420-4274-4370-bc7d-584ad8f918ac"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>W1Ah9oIWQ/Ue+h2nDlsMR8gs3ShXXUaHkzllLPDJgryeDkIY2X+dWNDBmy88pFC2qf1vQfOjAZSh
+DtxUrdWhNQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8d50bc7c-e060-4cf4-ab58-a804fbd7b2f2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QOxCn7gfQ0sftJ3AMGYXttSZRiAPcmErIUjHYsHcyzd0CPjat4xxVJQYbNgeo1oyK0ls8XUThcWC
+7oebmFU7pA==</DigestValue></Reference></SignedInfo><SignatureValue>JpNYektfR8kA6EJz7aR1pesGBdek+3MQ1vxG8DlPdONYlpjAujBNxafQjYSzJSdeHLrYfZO/YiAd
+zY5tLZYTrNp3oiMJggVUXhFX42Ym4Dsz059JDOcvhGB8KxhoEnicqz2Rhdj91ZEzUVUrMsKJCv3/
+V9YdYBoyL7HW1EWVAKSLxaZuMXm2IL/9aB41ZT7s5CC+RpEoiWttASvpPNmJT5+nqNdDE54FxGzL
+3/w9l44EonerAfbTP1olhfkg1nQ06oSkAbP+3FKCg3w69kAZE3FtP/vnUUpysTKypwqeo6B5ktRY
+FAqHMnjPzFAUtKKVn5r+GsB8z7+8JcUnaLxVyA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -559,4 +559,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6691a5ba-7d1d-4a61-9edd-8acc9e5cb274" Target="#_42534902-bd8f-4faf-b89d-4b0118f58e39"><Timestamp>2020-01-14 00:23:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8d50bc7c-e060-4cf4-ab58-a804fbd7b2f2" Target="#_d158f420-4274-4370-bc7d-584ad8f918ac"><Timestamp>2020-01-14 00:30:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
