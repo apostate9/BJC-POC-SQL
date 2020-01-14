@@ -168,15 +168,7 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
-    "id" : "_EiGbYDJ7Eeqx0pF_arEPog - full_Load_sample",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_OOD_0DJ6Eeqx0pF_arEPog - MANAGED_TABLE",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_OOD_0DJ6Eeqx0pF_arEPog - STD_MEDICATION_ADMINISTRATION_MASTER",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -425,15 +417,7 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
-    "id" : "_EiGbYDJ7Eeqx0pF_arEPog - full_Load_sample",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_OOD_0DJ6Eeqx0pF_arEPog - MANAGED_TABLE",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_OOD_0DJ6Eeqx0pF_arEPog - STD_MEDICATION_ADMINISTRATION_MASTER",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -1267,10 +1251,6 @@
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_OOD_0DJ6Eeqx0pF_arEPog - STD_MEDICATION_ADMINISTRATION_MASTER",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_OOD_0DJ6Eeqx0pF_arEPog - TENANT_DIM",
     "version" : "Latest",
     "type" : "schema"
@@ -1441,15 +1421,7 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
-    "id" : "_EiGbYDJ7Eeqx0pF_arEPog - full_Load_sample",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_OOD_0DJ6Eeqx0pF_arEPog - MANAGED_TABLE",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_OOD_0DJ6Eeqx0pF_arEPog - STD_MEDICATION_ADMINISTRATION_MASTER",
     "version" : "Latest",
     "type" : "schema"
   } ]
