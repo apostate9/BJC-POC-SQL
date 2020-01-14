@@ -158,7 +158,7 @@
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
     <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="DWH_DW_STAGE_Connection"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -183,7 +183,7 @@
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
     <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="UDMH_STD_CONN"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -276,7 +276,7 @@
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
     <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="UDMH_DIM_CONN"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -301,7 +301,7 @@
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
     <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="UDMH_STAGE_CONN"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -410,13 +410,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_58f0c0dd-e3ee-4242-81b4-5d1d6dac8256"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hgJq9RbQ32jHYo6/jslgnNk4ioH3Pb+opdYK+GWUSkkwnXOzYwvkvoJtCIRsCXs1dEJ78emonl7M
-db23XmdQjg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d8f9d2bd-c61f-4e23-ae8c-106bc03202f8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8mmEEG+cO6f0CKItBNoapbLtpRVpu4h8/0N64Gn+T3+/FkxmzYZepqyLvgdHU0RXTEvQ9SPDz6NS
-AwvBgrHdTw==</DigestValue></Reference></SignedInfo><SignatureValue>c+RCofGYtyDxRwHMr80lwUhAc9G0GbdMQl38kYdjT0rmOVA+7FSTThn22DM5K/qYKOYeMEgDoWIv
-eOQzulDe5qg0vsfOxSPMo6oOmgVzVHRmZiKTJ27m0qRhU4MlEnKQ388wLyUWbDeBkQGO4nDyj8xn
-hoo2IBMK4AxpjA6lbB0fopztMD4ackdBS4xQYBRqxEcN8+f1z7MIE2J7TOSDCdCSuZubL2pyyYLq
-tQQs7ltxpJE8LJKg2TNv6HZZ/Y6qSq4RGOFJkhbUdZPxr7+OKx0nU84nIMjk1rsqyrhyhpL2pBK4
-GDvTr5htxUHN22/HkheBb0O8KUYxktfZM/2yCQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fd7e3a53-f313-44aa-bbea-c3eddb9e1120"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Rii2/9aW3WignV2j/pELBcj3OKnmASJa6qwcBzC9BRBYLJWN/ZydcTNVDHrPG9pNSlH/egcTf/Vt
+/OWKpWxKGw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_87f3eb8b-d44a-4acd-a359-7c1df5b36ed6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dNWO8KUDhjst/SPLjt8qTncK0/hyBrHRfAwHDWiWkCF79GgLtV1c+vs/gq5jYUwvZfuRgTWQko10
+oPEAkSpLJQ==</DigestValue></Reference></SignedInfo><SignatureValue>XyB9UxgekXnMOvPtYAvRCIiyQgO1Kip9L/1+n38tG3vbWHWvHKG6g8acJJVU0L4+aYzpcnyEmjjG
+1zrNQB6uDZQUQAzf7myuIrVFtk3jf+h3BlrRfC5UI+sD7HIwYZyxhZtiMDx6jjjBa9k82NoDPVf5
+HWkbPF324IayE+L0yBAN9RCBclK+0Q2VwHOTbEm3iI1HuND2blA6Zu7MMc7iXtnAk4lazoSf+++G
+9tMuvIWv9uMWL9hFbNCRw4eHVHvIZYjtqDW3SIdqFHP/in8GYyN28wentnLlH1DjD8SS60vOGwoR
+OoS48CxfXGU38/GBGwV3yqRTrTzPa47D0Ss0zQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -438,4 +438,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d8f9d2bd-c61f-4e23-ae8c-106bc03202f8" Target="#_58f0c0dd-e3ee-4242-81b4-5d1d6dac8256"><Timestamp>2020-01-14 00:52:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_87f3eb8b-d44a-4acd-a359-7c1df5b36ed6" Target="#_fd7e3a53-f313-44aa-bbea-c3eddb9e1120"><Timestamp>2020-01-14 00:53:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
