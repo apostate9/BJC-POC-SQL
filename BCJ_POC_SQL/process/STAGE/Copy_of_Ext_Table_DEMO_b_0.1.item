@@ -298,31 +298,31 @@
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSQLDWHInput_3">
-      <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="PHARMACY_ORDER_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ORDER_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ADMIN_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="ADMIN_STATUS_CD_DK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ADMIN_STATUS_CD" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="TENANT_BK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="CHKSUM" nullable="false" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="MEDICATION_ADMINISTRATION_DK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="POBK" nullable="false" originalDbColumnName="PHARMACY_ORDER_BK" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="POID" nullable="false" originalDbColumnName="PHARMACY_ORDER_ID" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="MED_TXT" nullable="false" originalDbColumnName="MEDICATION_TXT" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="27" name="ORD_TS" nullable="false" originalDbColumnName="ORDER_TS" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="27" name="ADM_TS" nullable="false" originalDbColumnName="ADMIN_TS" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="ADM_STS_DK" nullable="false" originalDbColumnName="ADMIN_STATUS_CD_DK" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ADM_STS_CD" nullable="false" originalDbColumnName="ADMIN_STATUS_CD" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="27" name="VLD_FM_TS" nullable="false" originalDbColumnName="VALID_FROM_TS" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="27" name="VLD_TO_TS" nullable="false" originalDbColumnName="VALID_TO_TS" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="TNT_DK" nullable="false" originalDbColumnName="TENANT_DK" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CRN_IND" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="TENANT_DK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="CHKSM" nullable="false" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="ADMIN_STATUS_CD_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS_CD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="TENANT_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="MEDICATION_ADMINISTRATION_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="POBK" nullable="true" originalDbColumnName="PHARMACY_ORDER_BK" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="POID" nullable="true" originalDbColumnName="PHARMACY_ORDER_ID" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="MED_TXT" nullable="true" originalDbColumnName="MEDICATION_TXT" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="ORD_TS" nullable="true" originalDbColumnName="ORDER_TS" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="ADM_TS" nullable="true" originalDbColumnName="ADMIN_TS" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="ADM_STS_DK" nullable="true" originalDbColumnName="ADMIN_STATUS_CD_DK" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADM_STS_CD" nullable="true" originalDbColumnName="ADMIN_STATUS_CD" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="VLD_FM_TS" nullable="true" originalDbColumnName="VALID_FROM_TS" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="VLD_TO_TS" nullable="true" originalDbColumnName="VALID_TO_TS" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="7" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="TNT_DK" nullable="true" originalDbColumnName="TENANT_DK" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="CRN_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="TENANT_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="CHKSM" nullable="true" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="896">
@@ -340,20 +340,20 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Out_To_Insert_FACT" name="Out_To_Insert_FACT">
-      <column comment="" defaultValue="" key="false" length="19" name="MEDICATION_ADMINISTRATION_DK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="PHARMACY_ORDER_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ORDER_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ADMIN_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="ADMIN_STATUS_CD_DK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ADMIN_STATUS_CD" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="TENANT_DK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CRN_IND" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="CHG_IND" nullable="false" originalLength="1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="CHKSUM" nullable="false" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="MEDICATION_ADMINISTRATION_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="ADMIN_STATUS_CD_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS_CD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="TENANT_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="CRN_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="CHG_IND" nullable="true" originalLength="1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="Out_To_Update_FACT" name="Out_To_Update_FACT">
       <column comment="" defaultValue="" key="true" length="19" name="MEDICATION_ADMINISTRATION_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
@@ -372,23 +372,23 @@
       <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateExpressionFilter="true" columnNameFilter="From_MAM.POBK == null" expressionFilter="From_MAM.POBK == null || (From_MAM.POBK != null &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM))" name="Out_To_Insert_FACT" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="MEDICATION_ADMINISTRATION_DK" type="id_Long"/>
-        <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_BK " name="PHARMACY_ORDER_BK" type="id_String"/>
-        <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_ID " name="PHARMACY_ORDER_ID" type="id_String"/>
-        <mapperTableEntries expression="From_MAM.MEDICATION_TXT " name="MEDICATION_TXT" type="id_String"/>
-        <mapperTableEntries expression="From_MAM.ORDER_TS " name="ORDER_TS" type="id_Date"/>
-        <mapperTableEntries expression="From_MAM.ADMIN_TS " name="ADMIN_TS" type="id_Date"/>
-        <mapperTableEntries expression="From_MAM.ADMIN_STATUS_CD_DK " name="ADMIN_STATUS_CD_DK" type="id_String"/>
-        <mapperTableEntries expression="From_MAM.ADMIN_STATUS_CD " name="ADMIN_STATUS_CD" type="id_String"/>
-        <mapperTableEntries expression="From_MAM.VALID_FROM_TS " name="VALID_FROM_TS" type="id_Date"/>
-        <mapperTableEntries expression="From_MAM.VALID_TO_TS " name="VALID_TO_TS" type="id_Date"/>
-        <mapperTableEntries expression="From_MAM.TENANT_DK " name="TENANT_DK" type="id_Long"/>
-        <mapperTableEntries expression="1" name="CRN_IND" type="id_Integer"/>
-        <mapperTableEntries expression="&quot;A&quot;" name="CHG_IND" type="id_String"/>
-        <mapperTableEntries expression="From_MAM.CHKSUM " name="CHKSUM" type="id_String"/>
+        <mapperTableEntries expression="" name="MEDICATION_ADMINISTRATION_DK" nullable="true" type="id_Long"/>
+        <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_BK " name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="From_MAM.PHARMACY_ORDER_ID " name="PHARMACY_ORDER_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="From_MAM.MEDICATION_TXT " name="MEDICATION_TXT" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="From_MAM.ORDER_TS " name="ORDER_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="From_MAM.ADMIN_TS " name="ADMIN_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="From_MAM.ADMIN_STATUS_CD_DK " name="ADMIN_STATUS_CD_DK" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="From_MAM.ADMIN_STATUS_CD " name="ADMIN_STATUS_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="From_MAM.VALID_FROM_TS " name="VALID_FROM_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="From_MAM.VALID_TO_TS " name="VALID_TO_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="From_MAM.TENANT_DK " name="TENANT_DK" nullable="true" type="id_Long"/>
+        <mapperTableEntries expression="1" name="CRN_IND" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="&quot;A&quot;" name="CHG_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="From_MAM.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables activateExpressionFilter="true" expressionFilter="From_MAM.POBK != null &amp;&amp; !From_MAM.CHKSUM.equals(From_MAM.CHKSM)" name="Out_To_Update_FACT" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="From_MAM.MEDICATION_ADMINISTRATION_DK " name="MEDICATION_ADMINISTRATION_DK" nullable="true" type="id_Long"/>
@@ -407,31 +407,31 @@
         <mapperTableEntries expression="From_MAM.CHKSUM " name="CHKSUM" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="From_MAM" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="PHARMACY_ORDER_BK" type="id_String"/>
-        <mapperTableEntries name="PHARMACY_ORDER_ID" type="id_String"/>
-        <mapperTableEntries name="MEDICATION_TXT" type="id_String"/>
-        <mapperTableEntries name="ORDER_TS" type="id_Date"/>
-        <mapperTableEntries name="ADMIN_TS" type="id_Date"/>
-        <mapperTableEntries name="ADMIN_STATUS_CD_DK" type="id_String"/>
-        <mapperTableEntries name="ADMIN_STATUS_CD" type="id_String"/>
-        <mapperTableEntries name="VALID_FROM_TS" type="id_Date"/>
-        <mapperTableEntries name="VALID_TO_TS" type="id_Date"/>
-        <mapperTableEntries name="TENANT_BK" type="id_String"/>
-        <mapperTableEntries name="CHKSUM" type="id_String"/>
-        <mapperTableEntries name="MEDICATION_ADMINISTRATION_DK" type="id_Long"/>
-        <mapperTableEntries name="POBK" type="id_String"/>
-        <mapperTableEntries name="POID" type="id_String"/>
-        <mapperTableEntries name="MED_TXT" type="id_String"/>
-        <mapperTableEntries name="ORD_TS" type="id_Date"/>
-        <mapperTableEntries name="ADM_TS" type="id_Date"/>
-        <mapperTableEntries name="ADM_STS_DK" type="id_String"/>
-        <mapperTableEntries name="ADM_STS_CD" type="id_String"/>
-        <mapperTableEntries name="VLD_FM_TS" type="id_Date"/>
-        <mapperTableEntries name="VLD_TO_TS" type="id_Date"/>
-        <mapperTableEntries name="TNT_DK" type="id_Long"/>
-        <mapperTableEntries name="CRN_IND" type="id_Integer"/>
-        <mapperTableEntries name="TENANT_DK" type="id_Long"/>
-        <mapperTableEntries name="CHKSM" type="id_String"/>
+        <mapperTableEntries name="PHARMACY_ORDER_BK" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PHARMACY_ORDER_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries name="MEDICATION_TXT" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ORDER_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="ADMIN_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="ADMIN_STATUS_CD_DK" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ADMIN_STATUS_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="VALID_FROM_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="VALID_TO_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="TENANT_BK" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CHKSUM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="MEDICATION_ADMINISTRATION_DK" nullable="true" type="id_Long"/>
+        <mapperTableEntries name="POBK" nullable="true" type="id_String"/>
+        <mapperTableEntries name="POID" nullable="true" type="id_String"/>
+        <mapperTableEntries name="MED_TXT" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ORD_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="ADM_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="ADM_STS_DK" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ADM_STS_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="VLD_FM_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="VLD_TO_TS" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="TNT_DK" nullable="true" type="id_Long"/>
+        <mapperTableEntries name="CRN_IND" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="TENANT_DK" nullable="true" type="id_Long"/>
+        <mapperTableEntries name="CHKSM" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
@@ -467,20 +467,20 @@
     <elementParameter field="TEXT" name="LABEL" value="INSERT_NEW_FACT"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Out_To_Insert_FACT" name="tFileOutputDelimited_4">
-      <column comment="" defaultValue="" key="false" length="19" name="MEDICATION_ADMINISTRATION_DK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="PHARMACY_ORDER_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ORDER_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ADMIN_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="ADMIN_STATUS_CD_DK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="ADMIN_STATUS_CD" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="false" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="TENANT_DK" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CRN_IND" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="CHG_IND" nullable="false" originalLength="1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="CHKSUM" nullable="false" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="MEDICATION_ADMINISTRATION_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_BK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PHARMACY_ORDER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="500" name="MEDICATION_TXT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ORDER_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="ADMIN_STATUS_CD_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="ADMIN_STATUS_CD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="VALID_FROM_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="VALID_TO_TS" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME2" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="TENANT_DK" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="CRN_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="CHG_IND" nullable="true" originalLength="1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="CHKSUM" nullable="true" originalLength="32" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="992">
@@ -916,13 +916,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_59065905-c73c-4703-881c-db67b7da1167"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kl21F3w4RTrFnlhlbT+CWeabtepM7cBVFvNf9EbkNeVd1iu5bkbld8ApYFTgbw1WpFWAFcDKLcv9
-JL/SN7X+8g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_652f3c60-e46a-4289-83df-144fdaa8f0db"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vkBXn/a/WmPXQbEL3P9Uo+ohFeaiWC5R/heMtQj52JrbmIx2rNOHNpo7ahkGQzPdkKCKnSr8Jfhj
-qC6uTbEGoA==</DigestValue></Reference></SignedInfo><SignatureValue>ZhYoThsoEtnYAS/yW0NZuDW1iFX09STR/uuLXk8dQ+5KlMhRt2FS8zUVsiOXzAlCnZ4xKGu9fpP3
-vGLNKBLdBqOaxsyCVo1tPh32z05aEeXgLgwHK/TBM1Vhx2A8UmR1bifbHbSHpxUt+K2jzU6HUOJW
-EsXO6JEXaJKqbsnCxbW7AjF47R3l5n+okw2warWaZ8rLI4fU9L7M8ePoNeqQpVnR+u4VZeGqSGYp
-htYZ6/3485t818NM4sYfFFqcV8jfLxHuWN8+ZN2OAFv2BqTGC7Oy7yRl0TOy1Aq5CgN+DKszFy13
-fJAn19FbzohBTElxdS4L4KR8Ywvx7aHNYRCyog==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fa8d0472-efe9-4f38-9ed8-398ef8159e16"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bISQCXqgqEg3U4xqN+Wd5p971FasIxZknRRZoaa0KhE/4+S35s922b4kQFXKXRAS9QSgEPP11iEf
+CxIM+jMbmg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_827aa0cc-4e49-4b37-8a67-d7c562bf446f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YT3yUJv2OBmJ0Xo5lukUBatWl0P5NO5QOAMeNvdKOn8VaGRtd0ZWFfQEXJUEQJaMnoEPY6kX+hRz
+q0NExGyuiA==</DigestValue></Reference></SignedInfo><SignatureValue>ZWHG813gBoqP5ZQiwzV6afjQmBTzz98SN3Hzt1hojHfrsSmiqDWrNCpCepO6Mgto3axP/lCrDc6m
+xehxVarK1Ubyp49fPZUJb2rcdJu6yKw3Oz9rQxr8b/CNUjsJPivYE8kaFoP5x57sOP5gDxaK6Rz6
+WHe7JbUi9Z0lvsY7dTtEPqGoryJZ1je8DFfsoJp2KZpwqjGGiuZoSFxJeH6NYGAAIDKDbOSslvGm
+LEG7AxMpGoLQCv3PmGLqIFEkNcMP9oN+lSAj8bZx/S170k0IPCKv+tnq1OXTH7Jh5fK6I0TCFHIi
+ngVJNBQD739TalaGpMhhR5zrNxBZO35wD6GEtg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -944,4 +944,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_652f3c60-e46a-4289-83df-144fdaa8f0db" Target="#_59065905-c73c-4703-881c-db67b7da1167"><Timestamp>2020-01-14 00:06:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_827aa0cc-4e49-4b37-8a67-d7c562bf446f" Target="#_fa8d0472-efe9-4f38-9ed8-398ef8159e16"><Timestamp>2020-01-14 00:08:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
