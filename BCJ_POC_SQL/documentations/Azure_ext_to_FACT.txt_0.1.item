@@ -1,0 +1,25 @@
+Deployment instructions
+
+1. Deploy Talend Job
+2. Locate local folders in remote area.  Identify folder that can be used for local staging.
+3. Update Context variable to new local storage folder.
+4. Inside local storage folders create these subfolders:
+	1. MANAGED_TABLE
+	2. MED_ADMIN_FACT
+	3. MED_ADMIN_MASTER
+5. Run this SQL statement:
+	update [DW_STAGE].[LOAD_METADATA_TABLE]
+	set load_ts = '1900-01-01 00:00:00'
+
+Conditional configuration changes:
+if Azure storage location is relocated:
+1. Locate all tAzureStorage stages.  Update connection there.
+2. Locate all Bulk Exec stages.  update storage there.
+
+Running Sample vs Incremental
+Look at Stage "DWH_ext_Sample".  in there is the "FROM" line.
+Adjust as necessary.
+Current files at time of this writing: 
+- ext.full_Load_incramental (100k Incremental recordset)
+- ext.ful_Load (100mil live records)
+- ext.full_Load_sample (2mil initial recordset)
