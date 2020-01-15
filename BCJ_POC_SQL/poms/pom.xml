@@ -11,19 +11,8 @@
   <modules>
     <module>code/routines</module>
     <module>jobs/process/demo/onboardingdemojob_0.1</module>
-    <module>jobs/process/STAGE/ext_table_ingest_initial_copy_0.1</module>
     <module>jobs/process/STAGE/delete_insert_demo_0.1</module>
-    <module>jobs/process/STAGE/ext_table_ingest_daily_chksum_demo_0.1</module>
-    <module>jobs/process/STAGE/ext_table_ingest_using_chksum_demo_0.1</module>
-    <module>jobs/process/STAGE/ext_table_ingest_initial_chksum_demo_0.1</module>
-    <module>jobs/process/STAGE/copy_of_ext_table_ingest_using_chksum_demo_0.1</module>
     <module>jobs/process/STAGE/ext_table_demo_0.1</module>
-    <module>jobs/process/STAGE/copy_of_ext_table_demo_0.1</module>
-    <module>jobs/process/STAGE/copy_of_ext_table_demo_a_0.1</module>
-    <module>jobs/process/STAGE/copy_of_ext_table_demo_b_0.1</module>
-    <module>jobs/process/STAGE/copy_of_ext_table_demo_c_0.1</module>
-    <module>jobs/process/STAGE/copy_of_delete_insert_demo_0.1</module>
-    <module>jobs/process/STAGE/copy_of_ext_table_demo_d_0.1</module>
     <module>jobs/process/RHOLMAN/ext_table_ingest_daily_0.1</module>
     <module>jobs/process/RHOLMAN/ext_table_ingest_initial_0.1</module>
     <module>jobs/process/RHOLMAN/load_fact_daily_0.1</module>
