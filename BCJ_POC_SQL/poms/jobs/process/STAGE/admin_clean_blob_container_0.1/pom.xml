@@ -9,32 +9,32 @@
     <relativePath>../../../../</relativePath>
   </parent>
   <groupId>org.example.bcj_poc_sql.job</groupId>
-  <artifactId>Ext_Table_DEMO</artifactId>
-  <version>0.2.0</version>
-  <name>BCJ_POC_SQL Ext_Table_DEMO-0.2.0 (0.2,Job Designs)</name>
+  <artifactId>Admin_Clean_Blob_Container</artifactId>
+  <version>0.1.0</version>
+  <name>BCJ_POC_SQL Admin_Clean_Blob_Container-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
-    <talend.job.version>0.2</talend.job.version>
+    <talend.job.version>0.1</talend.job.version>
     <talend.project.name.lowercase>bcj_poc_sql</talend.project.name.lowercase>
-    <talend.job.path>bcj_poc_sql/ext_table_demo_0_2</talend.job.path>
+    <talend.job.path>bcj_poc_sql/admin_clean_blob_container_0_1</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>BCJ_POC_SQL</talend.project.name>
     <talend.product.version>7.2.1.20190909_1200_patch</talend.product.version>
-    <talend.job.finalName>ext_table_demo_0_2</talend.job.finalName>
+    <talend.job.finalName>admin_clean_blob_container_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.bcj_poc_sql.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.bcj_poc_sql.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
-    <talend.job.jvmargs>-Xms4096M -Xmx8192M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.context>Default</talend.job.context>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
-    <talend.job.name>Ext_Table_DEMO</talend.job.name>
-    <talend.job.id>_CrAvsDYlEeqPrL6a5272QQ</talend.job.id>
+    <talend.job.name>Admin_Clean_Blob_Container</talend.job.name>
+    <talend.job.id>_GlFu8DfuEeq2E_PUFpqyBw</talend.job.id>
     <talend.project.id>0</talend.project.id>
     <talend.job.folder>stage/</talend.job.folder>
     <talend.job.framework></talend.job.framework>
@@ -163,11 +163,6 @@
       <version>1.9.14-TALEND</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jakarta-oro-2.0.8</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
       <groupId>net.sourceforge.javacsv</groupId>
       <artifactId>javacsv</artifactId>
       <version>2.0</version>
@@ -228,11 +223,6 @@
       <version>0.31.8</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>mssql-jdbc</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
       <groupId>org.osgi</groupId>
       <artifactId>org.osgi.service.component.annotations</artifactId>
       <version>1.3.0</version>
@@ -279,17 +269,7 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>talend_DB_mssqlUtil-1.3-20190523</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
       <artifactId>talend_file_enhanced_20070724</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>talendcsv</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
