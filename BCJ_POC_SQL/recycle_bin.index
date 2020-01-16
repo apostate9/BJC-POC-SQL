@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin" lastUpdate="2020-01-15T23:03:01.481-0600">
+<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin" lastUpdate="2020-01-15T23:03:14.112-0600">
   <deletedFolders>process/STANDARDIZE</deletedFolders>
-  <deletedItems id="_m1RRwDfuEeqcpvDdMo_S4A" path="STAGE" type="PROCESS"/>
 </recyclebin:RecycleBin>
